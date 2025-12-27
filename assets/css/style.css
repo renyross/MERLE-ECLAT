@@ -615,8 +615,8 @@ a {
 /* Mobile Adjustments for Hero Text (Moved to ensure precedence) */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 1.8rem;
-        /* Significantly reduced */
+        font-size: 1.5rem;
+        /* Reduced further */
         line-height: 1.2;
     }
 
