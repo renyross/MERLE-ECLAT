@@ -35,15 +35,38 @@ function initMobileMenu() {
         }
     });
 
-    // Close menu when clicking a link
+    // Handle Submenu Toggles on Mobile
+    const menuItemsWithChildren = navLinks.querySelectorAll('.nav-item > a');
+    menuItemsWithChildren.forEach(link => {
+        const nextElement = link.nextElementSibling;
+        if (nextElement && nextElement.classList.contains('mega-menu')) {
+            link.addEventListener('click', (e) => {
+                // Only prevent default if we are in mobile view (navLinks has active class usually implies mobile menu is open)
+                // Or check window width
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    link.parentElement.classList.toggle('open');
+                }
+            });
+        }
+    });
+
+    // Close menu when clicking a link (BUT NOT if it's a toggle link on mobile)
     navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            if (icon) {
-                icon.classList.remove('ph-x');
-                icon.classList.add('ph-list');
+        link.addEventListener('click', (e) => {
+            // Check if this link is a toggle (has mega-menu sibling) and we are on mobile
+            const nextElement = link.nextElementSibling;
+            const isToggle = nextElement && nextElement.classList.contains('mega-menu') && window.innerWidth <= 1024;
+
+            if (!isToggle) {
+                // It's a regular link, close the menu
+                navLinks.classList.remove('active');
+                if (icon) {
+                    icon.classList.remove('ph-x');
+                    icon.classList.add('ph-list');
+                }
+                document.body.style.overflow = '';
             }
-            document.body.style.overflow = '';
         });
     });
 }

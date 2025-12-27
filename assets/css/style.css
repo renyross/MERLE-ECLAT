@@ -402,11 +402,18 @@ a {
         box-shadow: none;
         border: none;
         padding: 0;
-        display: block;
+        display: none;
+        /* Hidden by default */
         opacity: 1;
         visibility: visible;
         transform: none;
         background: transparent;
+    }
+
+    /* Show mega menu when parent is open */
+    .nav-item.open .mega-menu {
+        display: block;
+        animation: fadeIn 0.3s ease;
     }
 
     .mega-menu .mega-column {
