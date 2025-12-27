@@ -16,17 +16,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://merle-eclat.com">
 
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image" href="assets/images/hero_slider_new_2.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Icons (Phosphor Icons) -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Icons (Phosphor Icons) - Deferred for performance -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <!-- Global Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -217,7 +218,7 @@
                 <!-- 0. Best Sellers -->
                 <a href="shop.html?category=best-sellers" class="circle-item">
                     <div class="circle-img-wrapper">
-                        <img src="assets/images/best_sellers_new.png" alt="Nos Best Sellers" width="400" height="500"
+                        <img src="assets/images/best_sellers_new.png" alt="Nos Best Sellers" width="280" height="280"
                             loading="lazy">
                     </div>
                     <div class="circle-content">
@@ -231,7 +232,7 @@
                 <!-- 1. Cheveux Naturels -->
                 <a href="shop.html?category=naturel" class="circle-item">
                     <div class="circle-img-wrapper">
-                        <img src="assets/images/univers-naturel.png" alt="Cheveux Naturels" width="400" height="500"
+                        <img src="assets/images/univers-naturel.png" alt="Cheveux Naturels" width="280" height="280"
                             loading="lazy">
                     </div>
                     <div class="circle-content">
@@ -245,7 +246,7 @@
                 <!-- 2. Synthétiques Premium -->
                 <a href="shop.html?category=synthetique" class="circle-item">
                     <div class="circle-img-wrapper">
-                        <img src="assets/images/univers-synthetic.png" alt="Styles Iconiques" width="400" height="500"
+                        <img src="assets/images/univers-synthetic.png" alt="Styles Iconiques" width="280" height="280"
                             loading="lazy">
                     </div>
                     <div class="circle-content">
@@ -259,8 +260,8 @@
                 <!-- 3. Accessoires -->
                 <a href="shop.html?category=accessoires" class="circle-item">
                     <div class="circle-img-wrapper">
-                        <img src="assets/images/circle-accessories-branded.png" alt="Accessoires de Luxe" width="400"
-                            height="500" loading="lazy">
+                        <img src="assets/images/circle-accessories-branded.png" alt="Accessoires de Luxe" width="280"
+                            height="280" loading="lazy">
                     </div>
                     <div class="circle-content">
                         <span class="circle-subtitle">Finitions Parfaites</span>
@@ -382,7 +383,8 @@
                 <div class="ugc-track">
                     <!-- UGC 1 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-1.png" alt="Client Style Bob">
+                        <img src="assets/images/ugc-1.png" alt="Client Style Bob" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@sarah.in.paris</span>
@@ -390,7 +392,8 @@
                     </div>
                     <!-- UGC 2 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-2.png" alt="Client Style Cafe">
+                        <img src="assets/images/ugc-2.png" alt="Client Style Cafe" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@chloe_lifestyle</span>
@@ -398,7 +401,8 @@
                     </div>
                     <!-- UGC 3 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-3.png" alt="Client Style Car">
+                        <img src="assets/images/ugc-3.png" alt="Client Style Car" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@beauty_by_lina</span>
@@ -406,7 +410,8 @@
                     </div>
                     <!-- UGC 4 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-4.png" alt="Client Style Afro">
+                        <img src="assets/images/ugc-4.png" alt="Client Style Afro" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@afro_queen_93</span>
@@ -414,7 +419,8 @@
                     </div>
                     <!-- UGC 5 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-5.png" alt="Client Unboxing">
+                        <img src="assets/images/ugc-5.png" alt="Client Unboxing" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@marie_glam</span>
@@ -422,7 +428,8 @@
                     </div>
                     <!-- UGC 6 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-6.png" alt="Client Evening Look">
+                        <img src="assets/images/ugc-6.png" alt="Client Evening Look" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@elise_events</span>
@@ -430,7 +437,8 @@
                     </div>
                     <!-- UGC 7 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-7.png" alt="Client Street Style">
+                        <img src="assets/images/ugc-7.png" alt="Client Street Style" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@julie_urban</span>
@@ -438,7 +446,8 @@
                     </div>
                     <!-- UGC 8 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-8.png" alt="Client Mirror Selfie">
+                        <img src="assets/images/ugc-8.png" alt="Client Mirror Selfie" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@clara_morning</span>
@@ -446,7 +455,8 @@
                     </div>
                     <!-- UGC 9 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-9.png" alt="Client Hair Texture">
+                        <img src="assets/images/ugc-9.png" alt="Client Hair Texture" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@natural_hair_joy</span>
@@ -455,7 +465,8 @@
 
                     <!-- UGC 10 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-10.png" alt="Client Mirror Glam">
+                        <img src="assets/images/ugc-10.png" alt="Client Mirror Glam" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@sophie_chic</span>
@@ -463,7 +474,8 @@
                     </div>
                     <!-- UGC 11 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-11.png" alt="Client Car Selfie">
+                        <img src="assets/images/ugc-11.png" alt="Client Car Selfie" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@travel_with_nina</span>
@@ -471,7 +483,8 @@
                     </div>
                     <!-- UGC 12 -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-12.png" alt="Client Outdoor Natural">
+                        <img src="assets/images/ugc-12.png" alt="Client Outdoor Natural" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@emma_curls</span>
@@ -480,84 +493,96 @@
 
                     <!-- Duplicates for Loop (Batch 2) -->
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-1.png" alt="Client Style Bob">
+                        <img src="assets/images/ugc-1.png" alt="Client Style Bob" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@sarah.in.paris</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-2.png" alt="Client Style Cafe">
+                        <img src="assets/images/ugc-2.png" alt="Client Style Cafe" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@chloe_lifestyle</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-3.png" alt="Client Style Car">
+                        <img src="assets/images/ugc-3.png" alt="Client Style Car" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@beauty_by_lina</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-4.png" alt="Client Style Afro">
+                        <img src="assets/images/ugc-4.png" alt="Client Style Afro" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@afro_queen_93</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-5.png" alt="Client Unboxing">
+                        <img src="assets/images/ugc-5.png" alt="Client Unboxing" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@marie_glam</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-6.png" alt="Client Evening Look">
+                        <img src="assets/images/ugc-6.png" alt="Client Evening Look" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@elise_events</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-7.png" alt="Client Street Style">
+                        <img src="assets/images/ugc-7.png" alt="Client Street Style" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@julie_urban</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-8.png" alt="Client Mirror Selfie">
+                        <img src="assets/images/ugc-8.png" alt="Client Mirror Selfie" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@clara_morning</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-9.png" alt="Client Hair Texture">
+                        <img src="assets/images/ugc-9.png" alt="Client Hair Texture" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 2.0rem;"></i>
                             <span class="ugc-handle">@natural_hair_joy</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-10.png" alt="Client Mirror Glam">
+                        <img src="assets/images/ugc-10.png" alt="Client Mirror Glam" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
                             <span class="ugc-handle">@sophie_chic</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-11.png" alt="Client Car Selfie">
+                        <img src="assets/images/ugc-11.png" alt="Client Car Selfie" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
                             <span class="ugc-handle">@travel_with_nina</span>
                         </div>
                     </div>
                     <div class="ugc-card">
-                        <img src="assets/images/ugc-12.png" alt="Client Outdoor Natural">
+                        <img src="assets/images/ugc-12.png" alt="Client Outdoor Natural" width="350" height="350"
+                            loading="lazy">
                         <div class="ugc-overlay">
                             <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
                             <span class="ugc-handle">@emma_curls</span>
@@ -582,12 +607,14 @@
                 <div class="comparison-slider">
                     <!-- Image Left (Foreground) - Clipped -->
                     <div class="comparison-after">
-                        <img src="assets/images/transformation-before.png" alt="Avant - Style Quotidien">
+                        <img src="assets/images/transformation-before.png" alt="Avant - Style Quotidien" width="900"
+                            height="550" loading="lazy">
                         <span class="comparison-label label-after">Avant</span>
                     </div>
                     <!-- Image Right (Background) -->
                     <div class="comparison-before">
-                        <img src="assets/images/transformation-after.png" alt="Après - Style Merle Éclat">
+                        <img src="assets/images/transformation-after.png" alt="Après - Style Merle Éclat" width="900"
+                            height="550" loading="lazy">
                         <span class="comparison-label label-before">Après</span>
                     </div>
                     <!-- Handle -->
@@ -612,7 +639,8 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="assets/images/hero-slider-4.png" alt="La Fondatrice Merle Éclat">
+                    <img src="assets/images/hero-slider-4.png" alt="La Fondatrice Merle Éclat" width="600" height="800"
+                        loading="lazy">
                 </div>
                 <div class="about-content">
                     <span class="about-subtitle">Le Mot de la Fondatrice</span>
@@ -709,8 +737,8 @@
                 <div class="product-card">
                     <a href="product.html"
                         style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
-                        <img src="assets/images/hero-slider-3.png" alt="Perruque Longue Ondulée"
-                            style="width: 100%; transition: transform 0.3s ease;">
+                        <img src="assets/images/hero-slider-3.png" alt="Perruque Longue Ondulée" width="300"
+                            height="400" loading="lazy" style="width: 100%; transition: transform 0.3s ease;">
                         <span
                             style="position: absolute; top: 10px; left: 10px; background: var(--color-primary); color: white; padding: 2px 8px; font-size: 0.7rem; text-transform: uppercase;">Best-seller</span>
                     </a>
@@ -733,7 +761,8 @@
                 <div class="product-card">
                     <a href="product.html"
                         style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
-                        <img src="assets/images/hero-slider-5.png" alt="Carré Plongeant Bordeaux" style="width: 100%;">
+                        <img src="assets/images/hero-slider-5.png" alt="Carré Plongeant Bordeaux" width="300"
+                            height="400" loading="lazy" style="width: 100%;">
                     </a>
                     <div style="padding: 1rem 0;">
                         <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Le Carré
@@ -754,7 +783,8 @@
                 <div class="product-card">
                     <a href="product.html"
                         style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
-                        <img src="assets/images/hero-slider-1.png" alt="Afro Kinky" style="width: 100%;">
+                        <img src="assets/images/hero-slider-1.png" alt="Afro Kinky" width="300" height="400"
+                            loading="lazy" style="width: 100%;">
                         <span
                             style="position: absolute; top: 10px; left: 10px; background: var(--color-secondary); color: var(--color-primary); padding: 2px 8px; font-size: 0.7rem; text-transform: uppercase;">Nouveau</span>
                     </a>
@@ -776,7 +806,8 @@
                 <div class="product-card">
                     <a href="product.html"
                         style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
-                        <img src="assets/images/hero-slider-4.png" alt="Blond Platine Lisse" style="width: 100%;">
+                        <img src="assets/images/hero-slider-4.png" alt="Blond Platine Lisse" width="300" height="400"
+                            loading="lazy" style="width: 100%;">
                     </a>
                     <div style="padding: 1rem 0;">
                         <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Lisse
