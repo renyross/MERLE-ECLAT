@@ -1734,8 +1734,8 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
-    /* Adjusted to focus on faces */
+    object-position: top center;
+    /* Align from top */
     display: block;
 }
 
@@ -1758,8 +1758,8 @@ footer {
     /* Wait, this needs to match container width OR be forced size */
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
-    /* Adjusted to focus on faces */
+    object-position: top center;
+    /* Align from top */
     display: block;
     /* Important: We need to make sure this image stays 100% of the slider width even if container is smaller */
     /* This will be handled by setting explicit width in JS or using simpler technique */
