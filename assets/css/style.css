@@ -2125,9 +2125,19 @@ footer li {
         top: 50%;
         transform: translateY(-50%);
         gap: 0.8rem;
-        /* Smaller gap */
-        z-index: 1003;
-        /* Highest priority */
+        z-index: 1005;
+        /* Boost z-index */
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+
+    .header-icons .icon-btn {
+        color: var(--color-primary);
+        /* Force visibility */
+        font-size: 1.4rem;
+        display: flex;
+        /* Ensure icons are displayed */
     }
 
     /* Mobile Menu Drawer */
