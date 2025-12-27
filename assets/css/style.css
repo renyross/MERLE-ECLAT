@@ -2108,6 +2108,14 @@ footer li {
         left: 50%;
         transform: translateX(-50%);
         margin: 0;
+        z-index: 1002;
+        /* Ensure logo is clickable too */
+    }
+
+    .logo img {
+        height: 40px;
+        /* Smaller logo for mobile */
+        width: auto;
     }
 
     /* Icons on right */
@@ -2116,8 +2124,10 @@ footer li {
         right: 1rem;
         top: 50%;
         transform: translateY(-50%);
-        gap: 1rem;
-        /* Adjust gap for mobile */
+        gap: 0.8rem;
+        /* Smaller gap */
+        z-index: 1003;
+        /* Highest priority */
     }
 
     /* Mobile Menu Drawer */
