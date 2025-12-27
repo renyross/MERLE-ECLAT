@@ -2118,26 +2118,36 @@ footer li {
         width: auto;
     }
 
-    /* Icons on right */
+    /* Icons on right - Force Visible */
     .header-icons {
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        gap: 0.8rem;
-        z-index: 1005;
-        /* Boost z-index */
-        display: flex;
-        align-items: center;
-        width: auto;
+        position: absolute !important;
+        right: 1.5rem !important;
+        /* Move slightly left just in case */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 1005 !important;
+        display: flex !important;
+        background: transparent !important;
+        width: auto !important;
+        height: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .header-icons .icon-btn {
-        color: var(--color-primary);
-        /* Force visibility */
-        font-size: 1.4rem;
-        display: flex;
-        /* Ensure icons are displayed */
+        color: #000000 !important;
+        /* Force Black */
+        font-size: 1.8rem !important;
+        /* Make it BIG to test visibility */
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .header-icons .icon-btn i {
+        display: block !important;
+        /* Ensure icon font renders */
+        color: inherit !important;
     }
 
     /* Mobile Menu Drawer */
