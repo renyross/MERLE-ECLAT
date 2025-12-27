@@ -2222,19 +2222,44 @@ footer li {
         margin-top: 1rem !important;
     }
 
-    /* Products - 1 Column */
+    /* Reduce circle sizes on mobile */
+    .circle-img-wrapper {
+        width: 140px;
+        /* Reduced from 200px/280px */
+        height: 140px;
+    }
+
+    .circle-item {
+        max-width: 160px;
+    }
+
+    .circle-content h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Products - 2 Columns for better visibility */
     .product-grid,
-    .featured-grid {
-        grid-template-columns: 1fr;
-        /* 1 product per row */
-        gap: 2rem;
-        padding: 0 1rem;
+    .featured-grid,
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* Force 2 columns */
+        gap: 1rem !important;
+        /* Smaller gap */
+        padding: 0 0.5rem;
     }
 
     /* Product Card adjustments */
     .product-card {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        /* Lighter shadow */
+    }
+
+    .product-info h3 {
+        font-size: 0.9rem;
+        /* Smaller title */
+    }
+
+    .price {
+        font-size: 0.9rem;
     }
 
     /* Sticky CTA (Optional implementation) */
