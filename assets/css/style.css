@@ -144,6 +144,13 @@ a {
 /* ==========================================================================
    Header & Navigation
    ========================================================================== */
+html,
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    width: 100%;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -2121,8 +2128,8 @@ footer li {
     /* Icons on right - Force Visible */
     .header-icons {
         position: absolute !important;
-        right: 1.5rem !important;
-        /* Move slightly left just in case */
+        right: 20px !important;
+        /* Fixed safe distance */
         top: 50% !important;
         transform: translateY(-50%) !important;
         z-index: 1005 !important;
