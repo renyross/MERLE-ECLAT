@@ -402,11 +402,28 @@ a {
         box-shadow: none;
         border: none;
         padding: 0;
-        display: none;
-        /* Hide mega menus on mobile for simplicity or allow toggle */
+        display: block;
         opacity: 1;
         visibility: visible;
         transform: none;
+        background: transparent;
+    }
+
+    .mega-menu .mega-column {
+        min-width: unset;
+        margin-bottom: 1rem;
+        padding-left: 0;
+    }
+
+    .mega-menu h4 {
+        display: none;
+    }
+
+    .mega-menu ul li a {
+        padding: 0.2rem 0;
+        color: var(--color-text-light);
+        font-weight: 400;
+        font-size: 1rem;
     }
 }
 
