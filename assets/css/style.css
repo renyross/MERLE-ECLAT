@@ -2179,8 +2179,10 @@ footer li {
     }
 
     .hero-content {
-        padding-top: 6rem;
-        justify-content: center;
+        padding-top: 8rem;
+        /* Increased to ensure clearance */
+        justify-content: flex-start;
+        /* Push content down from top instead of centering */
         /* Center content vertically */
         text-align: center;
         align-items: center;
