@@ -2104,11 +2104,20 @@ footer li {
 
     /* Center Logo since Toggle is on left */
     .logo {
-        margin: 0 auto;
-        margin-right: auto;
-        /* Reset */
-        margin-left: auto;
-        /* Reset */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    /* Icons on right */
+    .header-icons {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        gap: 1rem;
+        /* Adjust gap for mobile */
     }
 
     /* Mobile Menu Drawer */
