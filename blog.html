@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conseils Perruques & Beauté Capillaire | Merle Éclat</title>
+    <meta name="description"
+        content="Guides experts, conseils d’entretien et inspirations coiffure pour sublimer vos perruques et révéler votre style.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .blog-header {
+            background-color: var(--color-accent);
+            padding: calc(var(--header-height) + 4rem) 0 4rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .blog-card {
+            border-radius: 4px;
+            overflow: hidden;
+            transition: var(--transition-fast);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 250px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem 0;
+        }
+
+        .blog-meta {
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .read-more {
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner"><button class="mobile-toggle" aria-label="Menu"><i class="ph ph-list"></i></button>
+
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Merle Éclat Logo">MERLE ÉCLAT</a>
+            <nav class="nav-links">
+                <!-- 1. Nos Perruques (Merged) -->
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link">NOS PERRUQUES <i class="ph ph-caret-down"
+                            style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu">
+                        <!-- Column 1: Par Collection -->
+                        <div class="mega-column">
+                            <h4>Par Type</h4>
+                            <ul>
+                                <li><a href="shop.html?category=naturel" style="font-weight: 600;">Cheveux Naturels</a>
+                                </li>
+                                <li><a href="shop.html?category=synthetique" style="font-weight: 600;">Cheveux
+                                        Synthétiques</a></li>
+                                <li><a href="shop.html?style=closures" style="font-weight: 600;">Closures / Frontals</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2: Par Style -->
+                        <div class="mega-column">
+                            <h4>Par Style</h4>
+                            <ul>
+                                <li><a href="shop.html?style=lisse">Lisse / Straight</a></li>
+                                <li><a href="shop.html?style=boucle">Bouclé / Curly</a></li>
+                                <li><a href="shop.html?style=ondule">Ondulé / Wavy</a></li>
+                                <li><a href="shop.html?style=afro">Afro / Kinky</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 3: Par Couleur -->
+                        <div class="mega-column">
+                            <h4>Par Couleur</h4>
+                            <ul>
+                                <li><a href="shop.html?color=noir"><span class="color-swatch"
+                                            style="background-color: #000000;"></span> Noir</a></li>
+                                <li><a href="shop.html?color=brun"><span class="color-swatch"
+                                            style="background-color: #4b3621;"></span> Brun</a></li>
+                                <li><a href="shop.html?color=blond"><span class="color-swatch"
+                                            style="background-color: #f0e68c;"></span> Blond</a></li>
+                                <li><a href="shop.html?color=colore"><span class="color-swatch"
+                                            style="background: linear-gradient(to right, #4b3621, #f0e68c);"></span>
+                                        Méché / Ombré</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 4: Par Longueur -->
+                        <div class="mega-column">
+                            <h4>Par Longueur</h4>
+                            <ul>
+                                <li><a href="shop.html?length=16">16″ pouces</a></li>
+                                <li><a href="shop.html?length=18">18″ pouces</a></li>
+                                <li><a href="shop.html?length=20-22">20″–22″ pouces</a></li>
+                                <li><a href="shop.html?length=24">24″ pouces</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Accessoires & Soins -->
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link">Accessoires & Soins <i class="ph ph-caret-down"
+                            style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu mega-menu-small">
+                        <div class="mega-column">
+                            <ul style="margin-top: 0.5rem;">
+                                <li><a href="product-bonnet.html">Bonnets et filets</a></li>
+                                <li><a href="product-soin.html">Produits d’entretien</a>
+                                </li>
+                                <li><a href="product-brosse.html">Peignes et brosses</a></li>
+                                <li><a href="shop.html?category=accessoires&type=support">Porte-Perruque & Support</a></li>
+                                <li><a href="shop.html?category=accessoires&type=foulard">Foulard</a></li>
+                                <li><a href="shop.html?category=accessoires&type=turban">Turban</a></li>
+                                <li><a href="shop.html?category=accessoires"
+                                        style="font-weight: 600; text-decoration: underline;">Voir tout les
+                                        accessoires</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Best-Sellers (Direct Link) -->
+                <div class="nav-item">
+                    <a href="shop.html?category=best-sellers" class="nav-link"
+                        style="color: var(--color-secondary); font-weight: 600;">Best-Sellers</a>
+                </div>
+
+                <!-- 5. Blog -->
+                <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="#" class="icon-btn"><i class="ph ph-user"></i></a>
+                <a href="#" class="icon-btn" style="position: relative;">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span
+                        style="position: absolute; top: -5px; right: -8px; background: var(--color-secondary); color: var(--color-primary); font-size: 0.6rem; padding: 2px 5px; border-radius: 50%; font-weight: 700;">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-header">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Le Journal</h1>
+            <p style="color: var(--color-text-light);">Conseils, tendances et secrets de beauté.</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="blog-grid">
+            <!-- Article 1 -->
+            <article class="blog-card">
+                <img src="assets/images/hero-bg.png" alt="Blog 1" class="blog-img"> <!-- Placeholder -->
+                <div class="blog-content">
+                    <span class="blog-meta">Conseils · 15 Décembre 2024</span>
+                    <h2 class="blog-title">Comment choisir sa première perruque naturelle ?</h2>
+                    <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">Le guide complet pour décrypter
+                        les types de laces, les densités et trouver le modèle qui vous sublimera.</p>
+                    <a href="#" class="read-more">Lire l'article</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="blog-card">
+                <img src="assets/images/product-2.png" alt="Blog 2" class="blog-img"> <!-- Placeholder -->
+                <div class="blog-content">
+                    <span class="blog-meta">Tendances · 10 Décembre 2024</span>
+                    <h2 class="blog-title">Les couleurs tendances de l'hiver 2025</h2>
+                    <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">Du bordeaux profond au blond
+                        polaire, découvrez les nuances qui feront sensation cette saison.</p>
+                    <a href="#" class="read-more">Lire l'article</a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="blog-card">
+                <img src="assets/images/product-3.png" alt="Blog 3" class="blog-img"> <!-- Placeholder -->
+                <div class="blog-content">
+                    <span class="blog-meta">Entretien · 05 Décembre 2024</span>
+                    <h2 class="blog-title">3 astuces pour prolonger la vie de votre perruque</h2>
+                    <p style="color: var(--color-text-light); margin-bottom: 1.5rem;">Les gestes essentiels pour garder
+                        vos cheveux souples et brillants plus longtemps.</p>
+                    <a href="#" class="read-more">Lire l'article</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--color-primary); color: white; padding: 2rem 0; margin-top: 4rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Merle Éclat. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L’Impériale 24" | Perruque Naturelle Lisse Premium – Merle Éclat</title>
+    <meta name="description"
+        content="L’Impériale : perruque premium au rendu naturel, confortable et élégante. Livraison rapide, qualité testée, satisfaction garantie.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .product-page {
+            padding-top: calc(var(--header-height) + 2rem);
+        }
+
+        .breadcrumb {
+            margin-bottom: 2rem;
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        .product-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Gallery */
+        .product-gallery {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .gallery-thumbs {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 80px;
+        }
+
+        .thumb-img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            cursor: pointer;
+            border: 1px solid transparent;
+            opacity: 0.7;
+            transition: var(--transition-fast);
+        }
+
+        .thumb-img:hover,
+        .thumb-img.active {
+            opacity: 1;
+            border-color: var(--color-primary);
+        }
+
+        .gallery-main {
+            flex: 1;
+            background-color: #f9f9f9;
+        }
+
+        /* Info */
+        .product-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .option-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .option-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .option-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .opt-btn {
+            padding: 0.8rem 1.2rem;
+            border: 1px solid var(--color-border);
+            background: transparent;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            font-family: var(--font-body);
+        }
+
+        .opt-btn:hover,
+        .opt-btn.active {
+            border-color: var(--color-primary);
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        /* Tabs */
+        .product-tabs {
+            margin-top: 4rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .tab-headers {
+            display: flex;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .tab-link {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            color: var(--color-text-light);
+        }
+
+        .tab-link.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        .tab-content {
+            padding: 2rem 0;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .product-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-gallery {
+                flex-direction: column-reverse;
+            }
+
+            .gallery-thumbs {
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .thumb-img {
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Same as Home) -->
+    <header class="header">
+        <div class="container header-inner"><button class="mobile-toggle" aria-label="Menu"><i class="ph ph-list"></i></button>
+
+
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Merle Éclat Logo">MERLE ÉCLAT</a>
+            <nav class="nav-links">
+                <!-- 1. Nos Perruques (Merged) -->
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link">NOS PERRUQUES <i class="ph ph-caret-down"
+                            style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu">
+                        <!-- Column 1: Par Collection -->
+                        <div class="mega-column">
+                            <h4>Par Type</h4>
+                            <ul>
+                                <li><a href="shop.html?category=naturel" style="font-weight: 600;">Cheveux Naturels</a>
+                                </li>
+                                <li><a href="shop.html?category=synthetique" style="font-weight: 600;">Cheveux
+                                        Synthétiques</a></li>
+                                <li><a href="shop.html?style=closures" style="font-weight: 600;">Closures / Frontals</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2: Par Style -->
+                        <div class="mega-column">
+                            <h4>Par Style</h4>
+                            <ul>
+                                <li><a href="shop.html?style=lisse">Lisse / Straight</a></li>
+                                <li><a href="shop.html?style=boucle">Bouclé / Curly</a></li>
+                                <li><a href="shop.html?style=ondule">Ondulé / Wavy</a></li>
+                                <li><a href="shop.html?style=afro">Afro / Kinky</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 3: Par Couleur -->
+                        <div class="mega-column">
+                            <h4>Par Couleur</h4>
+                            <ul>
+                                <li><a href="shop.html?color=noir"><span class="color-swatch"
+                                            style="background-color: #000000;"></span> Noir</a></li>
+                                <li><a href="shop.html?color=brun"><span class="color-swatch"
+                                            style="background-color: #4b3621;"></span> Brun</a></li>
+                                <li><a href="shop.html?color=blond"><span class="color-swatch"
+                                            style="background-color: #f0e68c;"></span> Blond</a></li>
+                                <li><a href="shop.html?color=colore"><span class="color-swatch"
+                                            style="background: linear-gradient(to right, #4b3621, #f0e68c);"></span>
+                                        Méché / Ombré</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 4: Par Longueur -->
+                        <div class="mega-column">
+                            <h4>Par Longueur</h4>
+                            <ul>
+                                <li><a href="shop.html?length=16">16″ pouces</a></li>
+                                <li><a href="shop.html?length=18">18″ pouces</a></li>
+                                <li><a href="shop.html?length=20-22">20″–22″ pouces</a></li>
+                                <li><a href="shop.html?length=24">24″ pouces</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Accessoires & Soins -->
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link">Accessoires & Soins <i class="ph ph-caret-down"
+                            style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu mega-menu-small">
+                        <div class="mega-column">
+                            <ul style="margin-top: 0.5rem;">
+                                <li><a href="product-bonnet.html">Bonnets et filets</a></li>
+                                <li><a href="product-soin.html">Produits d’entretien</a>
+                                </li>
+                                <li><a href="product-brosse.html">Peignes et brosses</a></li>
+                                <li><a href="shop.html?category=accessoires&type=support">Porte-Perruque & Support</a></li>
+                                <li><a href="shop.html?category=accessoires&type=foulard">Foulard</a></li>
+                                <li><a href="shop.html?category=accessoires&type=turban">Turban</a></li>
+                                <li><a href="shop.html?category=accessoires"
+                                        style="font-weight: 600; text-decoration: underline;">Voir tout les
+                                        accessoires</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Best-Sellers (Direct Link) -->
+                <div class="nav-item">
+                    <a href="shop.html?category=best-sellers" class="nav-link"
+                        style="color: var(--color-secondary); font-weight: 600;">Best-Sellers</a>
+                </div>
+
+                <!-- 5. Blog -->
+                <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="#" class="icon-btn"><i class="ph ph-user"></i></a>
+                <a href="#" class="icon-btn" style="position: relative;">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span id="cart-count-badge"
+                        style="position: absolute; top: -5px; right: -8px; background: var(--color-secondary); color: var(--color-primary); font-size: 0.6rem; padding: 2px 5px; border-radius: 50%; font-weight: 700;">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page container">
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a> / <a href="shop.html">Cheveux Naturels</a> / <span>L'Ondulée Noire</span>
+        </div>
+
+        <div class="product-layout">
+            <!-- Gallery -->
+            <div class="product-gallery">
+                <div class="gallery-thumbs">
+                    <img src="assets/images/product-1.png" class="thumb-img active" onclick="changeImage(this)">
+                    <!-- Using same image for demo, in real scenarios these would be different views -->
+                    <img src="assets/images/product-1.png" class="thumb-img" onclick="changeImage(this)">
+                    <img src="assets/images/product-1.png" class="thumb-img" onclick="changeImage(this)">
+                </div>
+                <div class="gallery-main">
+                    <img src="assets/images/product-1.png" id="mainImage" alt="L'Ondulée Noire"
+                        style="width: 100%; height: auto; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="product-info">
+                <h1 class="product-title">L'Ondulée Noire</h1>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div class="product-price">189.00 €</div>
+                    <div style="color: #f7b944; font-size: 0.9rem;">
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star-half"></i>
+                        <span style="color: var(--color-text-light); margin-left: 0.5rem;">(24 avis)</span>
+                    </div>
+                </div>
+
+                <p style="margin-bottom: 2rem; color: var(--color-text-light);">
+                    Une perruque en cheveux naturels brésiliens d'une qualité exceptionnelle.
+                    Sa texture ondulée naturelle apporte volume et élégance instantanés.
+                    Lace frontal indétectable pour un rendu ultra-réaliste.
+                </p>
+
+                <!-- Options -->
+                <div class="option-group">
+                    <span class="option-label">Longueur</span>
+                    <div class="option-buttons">
+                        <button class="opt-btn">18 pouces</button>
+                        <button class="opt-btn active">22 pouces</button>
+                        <button class="opt-btn">26 pouces</button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <span class="option-label">Densité</span>
+                    <div class="option-buttons">
+                        <button class="opt-btn">150% (Naturel)</button>
+                        <button class="opt-btn active">180% (Volume)</button>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <div style="display: flex; border: 1px solid var(--color-border); align-items: center;">
+                        <button
+                            style="padding: 0 1rem; border: none; background: transparent; cursor: pointer;">-</button>
+                        <input type="text" value="1"
+                            style="width: 40px; text-align: center; border: none; font-family: var(--font-body);">
+                        <button
+                            style="padding: 0 1rem; border: none; background: transparent; cursor: pointer;">+</button>
+                    </div>
+                    <button class="btn btn-primary" style="flex: 1;">Ajouter au Panier</button>
+                    <button class="btn btn-outline" style="padding: 0 1rem;"><i class="ph ph-heart"></i></button>
+                </div>
+
+                <div
+                    style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-success); display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="ph-fill ph-circle-wavy-check"></i> En stock - Expédié sous 24h
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="product-tabs">
+            <div class="tab-headers">
+                <div class="tab-link active" onclick="openTab(event, 'desc')">Description</div>
+                <div class="tab-link" onclick="openTab(event, 'tech')">Fiche Technique</div>
+                <div class="tab-link" onclick="openTab(event, 'delivery')">Livraison</div>
+            </div>
+
+            <div id="desc" class="tab-content active">
+                <p>Découvrez la quintessence du luxe avec notre modèle "L'Ondulée Noire". Conçue à partir de cheveux
+                    100% humains, vierges et non traités chimiquement, cette perruque offre une douceur incomparable et
+                    une brillance naturelle.</p>
+                <br>
+                <p>La tulle HD (Haute Définition) se fond parfaitement avec toutes les carnations, rendant la ligne
+                    frontale totalement invisible. Vous pouvez coiffer, lisser, boucler ou colorer ces cheveux comme
+                    s'il s'agissait des vôtres.</p>
+            </div>
+
+            <div id="tech" class="tab-content">
+                <ul style="list-style: disc; padding-left: 1.5rem; line-height: 2;">
+                    <li>Type de cheveux : 100% Cheveux Humains Brésiliens</li>
+                    <li>Texture : Body Wave (Ondulée)</li>
+                    <li>Couleur : Noir Naturel (1B)</li>
+                    <li>Bonnet : Taille moyenne ajustable avec peignes intégrés</li>
+                    <li>Lace : 13x4 Frontal HD Transparent</li>
+                </ul>
+            </div>
+
+            <div id="delivery" class="tab-content">
+                <p><strong>Expédition :</strong> Toute commande passée avant 14h est expédiée le jour même.</p>
+                <p><strong>Livraison :</strong> Colissimo (48h) ou Chronopost (24h).</p>
+                <p><strong>Retours :</strong> Vous disposez de 14 jours pour nous retourner le produit dans son état
+                    d'origine (lace non coupée).</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer (Simplified) -->
+    <footer style="background-color: var(--color-primary); color: white; padding: 2rem 0; margin-top: 4rem;">
+        <div class="container text-center">
+            <p>&copy; 2025 Merle Éclat. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Tab switching logic
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Image gallery logic
+        function changeImage(el) {
+            document.getElementById('mainImage').src = el.src;
+            document.querySelectorAll('.thumb-img').forEach(img => img.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        // Option selection logic
+        document.querySelectorAll('.opt-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Find siblings and remove active
+                this.parentElement.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections Perruques Naturelles & Synthétiques | Merle Éclat</title>
+    <meta name="description"
+        content="Découvrez nos perruques les plus aimées : naturelles, élégantes et testées par notre communauté. Les incontournables Merle Éclat.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .shop-header {
+            background-color: var(--color-accent);
+            padding: calc(var(--header-height) + 4rem) 0 4rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .filter-group select {
+            padding: 0.5rem;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-family: var(--font-body);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner"><button class="mobile-toggle" aria-label="Menu"><i
+                    class="ph ph-list"></i></button>
+
+
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Merle Éclat Logo">MERLE ÉCLAT</a>
+            <nav class="nav-links">
+                <!-- 1. Nos Perruques (Merged) -->
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link">NOS PERRUQUES <i class="ph ph-caret-down"
+                            style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu">
+                        <!-- Column 1: Par Collection -->
+                        <div class="mega-column">
+                            <h4>Par Type</h4>
+                            <ul>
+                                <li><a href="shop.html?category=naturel" style="font-weight: 600;">Cheveux Naturels</a>
+                                </li>
+                                <li><a href="shop.html?category=synthetique" style="font-weight: 600;">Cheveux
+                                        Synthétiques</a></li>
+                                <li><a href="shop.html?style=closures" style="font-weight: 600;">Closures / Frontals</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2: Par Style -->
+                        <div class="mega-column">
+                            <h4>Par Style</h4>
+                            <ul>
+                                <li><a href="shop.html?style=lisse">Lisse / Straight</a></li>
+                                <li><a href="shop.html?style=boucle">Bouclé / Curly</a></li>
+                                <li><a href="shop.html?style=ondule">Ondulé / Wavy</a></li>
+                                <li><a href="shop.html?style=afro">Afro / Kinky</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 3: Par Couleur -->
+                        <div class="mega-column">
+                            <h4>Par Couleur</h4>
+                            <ul>
+                                <li><a href="shop.html?color=noir"><span class="color-swatch"
+                                            style="background-color: #000000;"></span> Noir</a></li>
+                                <li><a href="shop.html?color=brun"><span class="color-swatch"
+                                            style="background-color: #4b3621;"></span> Brun</a></li>
+                                <li><a href="shop.html?color=blond"><span class="color-swatch"
+                                            style="background-color: #f0e68c;"></span> Blond</a></li>
+                                <li><a href="shop.html?color=colore"><span class="color-swatch"
+                                            style="background: linear-gradient(to right, #4b3621, #f0e68c);"></span>
+                                        Méché / Ombré</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 4: Par Longueur -->
+                        <div class="mega-column">
+                            <h4>Par Longueur</h4>
+                            <ul>
+                                <li><a href="shop.html?length=16">16″ pouces</a></li>
+                                <li><a href="shop.html?length=18">18″ pouces</a></li>
+                                <li><a href="shop.html?length=20-22">20″–22″ pouces</a></li>
+                                <li><a href="shop.html?length=24">24″ pouces</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Accessoires & Soins -->
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link">Accessoires & Soins <i class="ph ph-caret-down"
+                            style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu mega-menu-small">
+                        <div class="mega-column">
+                            <ul style="margin-top: 0.5rem;">
+                                <li><a href="product-bonnet.html">Bonnets et filets</a></li>
+                                <li><a href="product-soin.html">Produits d’entretien</a>
+                                </li>
+                                <li><a href="product-brosse.html">Peignes et brosses</a></li>
+                                <li><a href="shop.html?category=accessoires&type=support">Porte-Perruque & Support</a>
+                                </li>
+                                <li><a href="shop.html?category=accessoires&type=foulard">Foulard</a></li>
+                                <li><a href="shop.html?category=accessoires&type=turban">Turban</a></li>
+                                <li><a href="shop.html?category=accessoires"
+                                        style="font-weight: 600; text-decoration: underline;">Voir tout les
+                                        accessoires</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Best-Sellers (Direct Link) -->
+                <div class="nav-item">
+                    <a href="shop.html?category=best-sellers" class="nav-link"
+                        style="color: var(--color-secondary); font-weight: 600;">Best-Sellers</a>
+                </div>
+
+                <!-- 5. Blog -->
+                <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="#" class="icon-btn"><i class="ph ph-user"></i></a>
+                <a href="#" class="icon-btn" style="position: relative;">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span
+                        style="position: absolute; top: -5px; right: -8px; background: var(--color-secondary); color: var(--color-primary); font-size: 0.6rem; padding: 2px 5px; border-radius: 50%; font-weight: 700;">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="shop-header">
+        <div class="container">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Toutes nos Collections</h1>
+            <p style="color: var(--color-text-light);">Trouvez la perruque parfaite pour sublimer votre style.</p>
+        </div>
+    </div>
+
+    <div class="container" style="margin-bottom: 4rem;">
+        <div class="filter-bar" style="display: block;">
+            <div class="filter-group" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                <span style="font-weight: 600; margin-right: 0.5rem;">Filtrer par :</span>
+
+                <!-- Category Filter -->
+                <select id="filter-category"
+                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <option value="">Toutes les catégories</option>
+                    <option value="naturel">Cheveux Naturels</option>
+                    <option value="synthetique">Cheveux Synthétiques</option>
+                    <option value="accessoires">Accessoires</option>
+                </select>
+
+                <!-- Style Filter -->
+                <select id="filter-style"
+                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <option value="">Tous les styles</option>
+                    <optgroup label="Perruques">
+                        <option value="lisse">Lisse</option>
+                        <option value="boucle">Bouclé</option>
+                        <option value="ondule">Ondulé</option>
+                        <option value="afro">Afro / Crépus</option>
+                    </optgroup>
+                    <optgroup label="Accessoires">
+                        <option value="bonnet">Bonnets & Filets</option>
+                        <option value="soin">Soins & Entretien</option>
+                        <option value="brosse">Brosses & Peignes</option>
+                    </optgroup>
+                </select>
+
+                <!-- Color Filter -->
+                <select id="filter-color"
+                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <option value="">Toutes les couleurs</option>
+                    <option value="noir">Noir</option>
+                    <option value="brun">Brun / Châtain</option>
+                    <option value="blond">Blond</option>
+                    <option value="roux">Roux / Auburn</option>
+                    <option value="colore">Coloré / Ombré</option>
+                </select>
+
+                <!-- Length Filter -->
+                <select id="filter-length"
+                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <option value="">Toutes les longueurs</option>
+                    <option value="court">Court</option>
+                    <option value="mi-long">Mi-long</option>
+                    <option value="long">Long</option>
+                </select>
+
+                <!-- Genre Filter -->
+                <select id="filter-genre"
+                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <option value="">Tous les genres</option>
+                    <option value="femme">Femme</option>
+                    <option value="homme">Homme</option>
+                    <option value="enfant">Enfant</option>
+                </select>
+
+                <button id="reset-filters"
+                    style="font-size: 0.9rem; text-decoration: underline; background: none; border: none; cursor: pointer; color: var(--color-text-light);">Réinitialiser</button>
+            </div>
+        </div>
+
+        <div class="collection-grid" id="product-grid"
+            style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-top: 2rem;">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="naturel" data-style="ondule" data-color="noir" data-length="long"
+                data-genre="femme">
+                <a href="product.html"
+                    style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
+                    <img src="assets/images/product-1.png" alt="Perruque Longue Ondulée"
+                        style="width: 100%; transition: transform 0.3s ease;">
+                    <span
+                        style="position: absolute; top: 10px; left: 10px; background: var(--color-primary); color: white; padding: 2px 8px; font-size: 0.7rem; text-transform: uppercase;">Best-seller</span>
+                </a>
+                <div style="padding: 1rem 0;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">L'Ondulée Noire</a>
+                    </h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Cheveux Naturels · 22 pouces</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                        <span style="font-weight: 700;">189.00 €</span>
+                        <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="synthetique" data-style="lisse" data-color="colore"
+                data-length="court" data-genre="femme">
+                <a href="product.html"
+                    style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
+                    <img src="assets/images/product-2.png" alt="Carré Bordeaux" style="width: 100%;">
+                </a>
+                <div style="padding: 1rem 0;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Carré Plongeant
+                            Bordeaux</a>
+                    </h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Synthétique Premium · 12 pouces</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                        <span style="font-weight: 700;">89.00 €</span>
+                        <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="naturel" data-style="afro" data-color="noir" data-length="court"
+                data-genre="femme">
+                <a href="product.html"
+                    style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
+                    <img src="assets/images/product-3.png" alt="Afro Kinky" style="width: 100%;">
+                    <span
+                        style="position: absolute; top: 10px; left: 10px; background: var(--color-secondary); color: var(--color-primary); padding: 2px 8px; font-size: 0.7rem; text-transform: uppercase;">Nouveau</span>
+                </a>
+                <div style="padding: 1rem 0;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Afro Kinky Volume</a>
+                    </h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Cheveux Naturels · 14 pouces</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                        <span style="font-weight: 700;">149.00 €</span>
+                        <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="synthetique" data-style="lisse" data-color="blond"
+                data-length="long" data-genre="femme">
+                <a href="product.html"
+                    style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
+                    <img src="assets/images/product-4.png" alt="Lisse Miel" style="width: 100%;">
+                </a>
+                <div style="padding: 1rem 0;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Lisse Blond Miel</a>
+                    </h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Synthétique Premium · 24 pouces</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                        <span style="font-weight: 700;">109.00 €</span>
+                        <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Accessoire 1 -->
+            <div class="product-card" data-category="accessoires" data-style="soin" data-color="" data-length=""
+                data-genre="">
+                <a href="product.html"
+                    style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
+                    <img src="assets/images/collection-accessories-new.png" alt="Kit Entretien" style="width: 100%;">
+                </a>
+                <div style="padding: 1rem 0;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Kit Entretien
+                            Complet</a>
+                    </h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Accessoires · Soin</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                        <span style="font-weight: 700;">45.00 €</span>
+                        <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Accessoire 2 -->
+            <div class="product-card" data-category="accessoires" data-style="brosse" data-color="" data-length=""
+                data-genre="">
+                <a href="product.html"
+                    style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
+                    <img src="assets/images/collection-accessories-new.png" alt="Brosse Démêlante" style="width: 100%;">
+                </a>
+                <div style="padding: 1rem 0;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Brosse Démêlante</a>
+                    </h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Accessoires · Brosse</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                        <span style="font-weight: 700;">19.00 €</span>
+                        <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Duplicates to fill grid for demo -->
+            <div class="product-card" data-category="naturel" data-style="ondule" data-color="brun"
+                data-length="mi-long" data-genre="femme">
+                <a href="product.html"
+                    style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
+                    <img src="assets/images/product-1.png" alt="Perruque Longue Ondulée"
+                        style="width: 100%; filter: brightness(0.9);">
+                </a>
+                <div style="padding: 1rem 0;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Body Wave Brune</a>
+                    </h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Cheveux Naturels · 20 pouces</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                        <span style="font-weight: 700;">179.00 €</span>
+                        <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="synthetique" data-style="lisse" data-color="blond"
+                data-length="long" data-genre="femme">
+                <a href="product.html"
+                    style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
+                    <img src="assets/images/product-4.png" alt="Lisse Miel" style="width: 100%; filter: sepia(0.2);">
+                </a>
+                <div style="padding: 1rem 0;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;"><a href="product.html">Lisse Blond Miel</a>
+                    </h3>
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">Synthétique Premium · 22 pouces</p>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                        <span style="font-weight: 700;">99.00 €</span>
+                        <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer (Simplified) -->
+    <footer style="background-color: var(--color-primary); color: white; padding: 2rem 0;">
+        <div class="container text-center">
+            <p>&copy; 2025 Merle Éclat. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+
+            // Get all Select Elements
+            const selectCategory = document.getElementById('filter-category');
+            const selectStyle = document.getElementById('filter-style');
+            const selectColor = document.getElementById('filter-color');
+            const selectLength = document.getElementById('filter-length');
+            const selectGenre = document.getElementById('filter-genre');
+            const resetButton = document.getElementById('reset-filters');
+
+            const titleElement = document.querySelector('.shop-header h1');
+            const products = document.querySelectorAll('.product-card');
+
+            // 1. Initialize Inputs from URL
+            if (params.get('category')) selectCategory.value = params.get('category');
+            if (params.get('style')) selectStyle.value = params.get('style');
+            if (params.get('color')) selectColor.value = params.get('color');
+            if (params.get('length')) selectLength.value = params.get('length');
+            if (params.get('genre')) selectGenre.value = params.get('genre');
+
+            // 2. Main Filter Function
+            function applyFilters() {
+                const category = selectCategory.value;
+                const style = selectStyle.value;
+                const color = selectColor.value;
+                const length = selectLength.value;
+                const genre = selectGenre.value;
+
+                // Update URL (optional but good for UX)
+                const newUrl = new URL(window.location);
+                if (category) newUrl.searchParams.set('category', category); else newUrl.searchParams.delete('category');
+                if (style) newUrl.searchParams.set('style', style); else newUrl.searchParams.delete('style');
+                if (color) newUrl.searchParams.set('color', color); else newUrl.searchParams.delete('color');
+                if (length) newUrl.searchParams.set('length', length); else newUrl.searchParams.delete('length');
+                if (genre) newUrl.searchParams.set('genre', genre); else newUrl.searchParams.delete('genre');
+                window.history.replaceState({}, '', newUrl);
+
+                // Update Dynamic SEO Title
+                let seoTitleParts = [];
+
+                // 1. Base Product
+                if (category === "accessoires") {
+                    seoTitleParts.push("Accessoires");
+                } else if (category === "naturel") {
+                    seoTitleParts.push("Perruques Naturelles");
+                } else if (category === "synthetique") {
+                    seoTitleParts.push("Perruques Synthétiques");
+                } else {
+                    seoTitleParts.push("Perruques");
+                }
+
+                // 2. Style
+                if (style) {
+                    const styleMap = {
+                        'lisse': 'Lisses',
+                        'boucle': 'Bouclées (Curly)',
+                        'ondule': 'Ondulées (Wavy)',
+                        'afro': 'Afro Kinky',
+                        'closures': 'Closures & Frontals'
+                    };
+                    if (styleMap[style]) seoTitleParts.push(styleMap[style]);
+                }
+
+                // 3. Color
+                if (color) {
+                    const colorMap = {
+                        'noir': 'Noires',
+                        'brun': 'Brunes',
+                        'blond': 'Blondes',
+                        'roux': 'Rousses',
+                        'colore': 'Méchées & Ombré'
+                    };
+                    if (colorMap[color]) seoTitleParts.push(colorMap[color]);
+                }
+
+                // 4. Length (SEO Mapping)
+                if (length) {
+                    // Start of 'Long' keywords injection
+                    if (length === '16' || length === '18') {
+                        seoTitleParts.push(`Mi-Longues (${length}")`);
+                    } else if (length === '20-22' || length === '24') {
+                        seoTitleParts.push(`Longues (${length}")`); // Keyword: Perruque Longue
+                    } else if (length === 'court') {
+                        seoTitleParts.push("Courtes (Bob)");
+                    } else if (length === 'mi-long') {
+                         seoTitleParts.push("Mi-Longues");
+                    } else if (length === 'long') {
+                         seoTitleParts.push("Longues");
+                    } else {
+                        seoTitleParts.push(length + '"');
+                    }
+                }
+
+                // Construct Title
+                let pageTitle = seoTitleParts.join(' ');
+                
+                // Fallback / Clean up
+                if (pageTitle === "Perruques") pageTitle = "Toutes nos Perruques & Collections";
+
+                document.title = `${pageTitle} | Merle Éclat`;
+                titleElement.textContent = pageTitle;
+
+
+                // Filter Items
+                products.forEach(product => {
+                    let shouldShow = true;
+                    if (category && product.dataset.category !== category) shouldShow = false;
+                    if (style && product.dataset.style !== style) shouldShow = false;
+                    if (color && product.dataset.color !== color) shouldShow = false;
+                    if (length && product.dataset.length !== length) shouldShow = false;
+                    if (genre && product.dataset.genre !== genre) shouldShow = false;
+
+                    product.style.display = shouldShow ? 'block' : 'none';
+                });
+            }
+
+            // 3. Add Event Listeners
+            const filters = [selectCategory, selectStyle, selectColor, selectLength, selectGenre];
+            filters.forEach(filter => {
+                filter.addEventListener('change', applyFilters);
+            });
+
+            resetButton.addEventListener('click', () => {
+                filters.forEach(f => f.value = "");
+                applyFilters();
+            });
+
+            // 4. Initial Run
+            applyFilters();
+        });
+    </script>
+    <script>
+        // Init reveal explicitly for this page since we might have missed the load event
+        document.addEventListener('DOMContentLoaded', () => {
+            // Re-trigger visual update if needed
+        });
+    </script>
+</body>
+
+</html>

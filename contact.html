@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Service Client | Merle Éclat</title>
+    <meta name="description"
+        content="Une question sur nos perruques ou votre commande ? Contactez le service expert Merle Éclat pour une réponse rapide et personnalisée.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .contact-header {
+            padding: 8rem 0 4rem 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            /* Matched to style.css input style if exists, or generic */
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-family: var(--font-body);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner"><button class="mobile-toggle" aria-label="Menu"><i class="ph ph-list"></i></button>
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Merle Éclat Logo">MERLE ÉCLAT</a>
+            <nav class="nav-links">
+                <!-- 1. Nos Perruques (Merged) -->
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link">NOS PERRUQUES <i class="ph ph-caret-down"
+                            style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu">
+                        <!-- Column 1: Par Collection -->
+                        <div class="mega-column">
+                            <h4>Par Type</h4>
+                            <ul>
+                                <li><a href="shop.html?category=naturel" style="font-weight: 600;">Cheveux Naturels</a>
+                                </li>
+                                <li><a href="shop.html?category=synthetique" style="font-weight: 600;">Cheveux
+                                        Synthétiques</a></li>
+                                <li><a href="shop.html?style=closures" style="font-weight: 600;">Closures / Frontals</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2: Par Style -->
+                        <div class="mega-column">
+                            <h4>Par Style</h4>
+                            <ul>
+                                <li><a href="shop.html?style=lisse">Lisse / Straight</a></li>
+                                <li><a href="shop.html?style=boucle">Bouclé / Curly</a></li>
+                                <li><a href="shop.html?style=ondule">Ondulé / Wavy</a></li>
+                                <li><a href="shop.html?style=afro">Afro / Kinky</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 3: Par Couleur -->
+                        <div class="mega-column">
+                            <h4>Par Couleur</h4>
+                            <ul>
+                                <li><a href="shop.html?color=noir"><span class="color-swatch"
+                                            style="background-color: #000000;"></span> Noir</a></li>
+                                <li><a href="shop.html?color=brun"><span class="color-swatch"
+                                            style="background-color: #4b3621;"></span> Brun</a></li>
+                                <li><a href="shop.html?color=blond"><span class="color-swatch"
+                                            style="background-color: #f0e68c;"></span> Blond</a></li>
+                                <li><a href="shop.html?color=colore"><span class="color-swatch"
+                                            style="background: linear-gradient(to right, #4b3621, #f0e68c);"></span>
+                                        Méché / Ombré</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 4: Par Longueur -->
+                        <div class="mega-column">
+                            <h4>Par Longueur</h4>
+                            <ul>
+                                <li><a href="shop.html?length=16">16″ pouces</a></li>
+                                <li><a href="shop.html?length=18">18″ pouces</a></li>
+                                <li><a href="shop.html?length=20-22">20″–22″ pouces</a></li>
+                                <li><a href="shop.html?length=24">24″ pouces</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Accessoires & Soins -->
+                <div class="nav-item">
+                    <a href="shop.html" class="nav-link">Accessoires & Soins <i class="ph ph-caret-down"
+                            style="font-size: 0.8rem;"></i></a>
+                    <div class="mega-menu mega-menu-small">
+                        <div class="mega-column">
+                            <ul style="margin-top: 0.5rem;">
+                                <li><a href="product-bonnet.html">Bonnets et filets</a></li>
+                                <li><a href="product-soin.html">Produits d’entretien</a>
+                                </li>
+                                <li><a href="product-brosse.html">Peignes et brosses</a></li>
+                                <li><a href="shop.html?category=accessoires&type=support">Porte-Perruque & Support</a></li>
+                                <li><a href="shop.html?category=accessoires&type=foulard">Foulard</a></li>
+                                <li><a href="shop.html?category=accessoires&type=turban">Turban</a></li>
+                                <li><a href="shop.html?category=accessoires"
+                                        style="font-weight: 600; text-decoration: underline;">Voir tout les
+                                        accessoires</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Best-Sellers (Direct Link) -->
+                <div class="nav-item">
+                    <a href="shop.html?category=best-sellers" class="nav-link"
+                        style="color: var(--color-secondary); font-weight: 600;">Best-Sellers</a>
+                </div>
+
+                <!-- 5. Blog -->
+                <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="#" class="icon-btn"><i class="ph ph-user"></i></a>
+                <a href="#" class="icon-btn" style="position: relative;">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span
+                        style="position: absolute; top: -5px; right: -8px; background: var(--color-secondary); color: var(--color-primary); font-size: 0.6rem; padding: 2px 5px; border-radius: 50%; font-weight: 700;">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="contact-header">
+        <div class="container">
+            <h1 class="section-title">Contactez-nous</h1>
+            <p>Une question ? Une demande spécifique ? Nous sommes là pour vous répondre.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Info -->
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 2rem;">Nos Coordonnées</h3>
+
+                    <div class="contact-info-item">
+                        <i class="ph ph-map-pin contact-icon"></i>
+                        <div>
+                            <h4>Boutique & Atelier</h4>
+                            <p>12 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="ph ph-phone contact-icon"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+33 1 23 45 67 89<br><span
+                                    style="font-size: 0.85rem; color: var(--color-text-light);">Lun - Ven, 9h -
+                                    18h</span></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="ph ph-envelope-simple contact-icon"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@merleeclat.com<br><span
+                                    style="font-size: 0.85rem; color: var(--color-text-light);">Réponse sous 24h</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 2rem;">Envoyez-nous un message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Votre adresse email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" placeholder="Sujet de votre message">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map (Optional - Placeholder) -->
+    <!-- Map -->
+    <section class="map-section" style="height: 450px; width: 100%;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.237233282216!2d2.307548976865673!3d48.86801900036688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fcc4305886f%3A0x6e9603592ee24a27!2s12%20Av.%20des%20Champs-%C3%89lys%C3%A9es%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1703648000000!5m2!1sfr!2sfr"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--color-primary); color: white; padding: 2rem 0;">
+        <div class="container text-center">
+            <p>&copy; 2025 Merle Éclat. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
