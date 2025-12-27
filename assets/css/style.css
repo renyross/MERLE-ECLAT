@@ -2214,12 +2214,12 @@ footer li {
     }
 
     .hero-subtitle {
-        display: none;
-        /* Hide subtitle on very small screens to save space? Or keep short. User asked to "Simplify visuals". Let's hide if too long, or keep. User said "Mettre en avant message clé". Keep title. */
-        /* Let's keep it but small */
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
         display: block;
+        font-size: 1rem;
+        margin: 0 auto 1.5rem auto;
+        /* Center horizontally */
+        max-width: 90%;
+        text-align: center;
     }
 
     .hero-cta {
