@@ -142,8 +142,7 @@ function initScrollReveal() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: Stop observing once revealed
-                // observer.unobserve(entry.target); 
+                observer.unobserve(entry.target); // Stop observing once revealed
             }
         });
     }, {
@@ -152,15 +151,21 @@ function initScrollReveal() {
     });
 
     elementsToReveal.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        // Only hide if we are sure we can reveal them
+        // Add a class 'reveal-pending' via CSS instead of inline style for better separation
+        el.classList.add('reveal-pending'); // We will add CSS for this
         observer.observe(el);
     });
 }
 
-// Helper to add class via JS for the CSS to pick up if we move styles to CSS
+// Helper to add class via JS for the CSS to pick up
+// We use a CSS class logic instead of inline styles to prevent 'stuck' invisible elements
 document.head.insertAdjacentHTML("beforeend", `<style>
+    .reveal-pending {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
     .visible {
         opacity: 1 !important;
         transform: translateY(0) !important;
