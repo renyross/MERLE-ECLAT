@@ -11,36 +11,125 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .shop-header {
-            background-color: var(--color-accent);
-            padding: calc(var(--header-height) + 4rem) 0 4rem 0;
+            background-color: #fafafa;
+            padding: calc(var(--header-height) + 3rem) 0 3rem 0;
             text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .filter-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
             border-bottom: 1px solid var(--color-border);
+            margin-bottom: 0;
         }
 
-        .filter-group select {
-            padding: 0.5rem;
+        .shop-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .filter-section {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 2rem;
+            background: white;
+            position: sticky;
+            top: var(--header-height);
+            z-index: 100;
+        }
+
+        .mobile-filter-trigger {
+            display: none;
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--color-white);
             border: 1px solid var(--color-border);
             border-radius: 4px;
+            font-weight: 600;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .filter-grid {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .filter-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .filter-item label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            letter-spacing: 0.5px;
+        }
+
+        .filter-item select {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid var(--color-border);
+            border-radius: 0;
             font-family: var(--font-body);
+            font-size: 0.85rem;
+            background-color: var(--color-white);
+            min-width: 150px;
+        }
+
+        #reset-filters {
+            font-size: 0.8rem;
+            text-decoration: underline;
+            color: var(--color-text-light);
+            cursor: pointer;
+            padding-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .shop-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .shop-header {
+                padding-top: calc(var(--header-height) + 2rem);
+            }
+
+            .mobile-filter-trigger {
+                display: flex;
+            }
+
+            .filter-grid {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding-top: 1rem;
+            }
+
+            .filter-grid.active {
+                display: flex;
+            }
+
+            .filter-item select {
+                min-width: 100%;
+            }
+
+            .filter-section {
+                top: 60px;
+            }
+
+            /* Header height on mobile */
         }
     </style>
 </head>
@@ -159,85 +248,99 @@
 
     <div class="shop-header">
         <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Toutes nos Collections</h1>
-            <p style="color: var(--color-text-light);">Trouvez la perruque parfaite pour sublimer votre style.</p>
+            <h1>Toutes nos Collections</h1>
+            <p style="color: var(--color-text-light); max-width: 600px; margin: 0 auto; font-size: 0.95rem;">Explorez
+                notre sélection premium de perruques naturelles et synthétiques conçues pour sublimer chaque instant de
+                votre vie.</p>
         </div>
     </div>
 
-    <div class="container" style="margin-bottom: 4rem;">
-        <div class="filter-bar" style="display: block;">
-            <div class="filter-group" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-                <span style="font-weight: 600; margin-right: 0.5rem;">Filtrer par :</span>
+    <div class="filter-section">
+        <div class="container">
+            <div class="mobile-filter-trigger" id="mobile-filter-toggle">
+                <i class="ph ph-sliders"></i> Filtrer & Trier
+            </div>
 
+            <div class="filter-grid" id="filter-grid">
                 <!-- Category Filter -->
-                <select id="filter-category"
-                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
-                    <option value="">Toutes les catégories</option>
-                    <option value="naturel">Cheveux Naturels</option>
-                    <option value="synthetique">Cheveux Synthétiques</option>
-                    <option value="accessoires">Accessoires</option>
-                </select>
+                <div class="filter-item">
+                    <label>Catégorie</label>
+                    <select id="filter-category">
+                        <option value="">Toutes les catégories</option>
+                        <option value="naturel">Cheveux Naturels</option>
+                        <option value="synthetique">Cheveux Synthétiques</option>
+                        <option value="accessoires">Accessoires</option>
+                    </select>
+                </div>
 
                 <!-- Style Filter -->
-                <select id="filter-style"
-                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
-                    <option value="">Tous les styles</option>
-                    <optgroup label="Perruques">
-                        <option value="lisse">Lisse</option>
-                        <option value="boucle">Bouclé</option>
-                        <option value="ondule">Ondulé</option>
-                        <option value="afro">Afro / Crépus</option>
-                    </optgroup>
-                    <optgroup label="Accessoires">
-                        <option value="bonnet">Bonnets & Filets</option>
-                        <option value="soin">Soins & Entretien</option>
-                        <option value="brosse">Brosses & Peignes</option>
-                    </optgroup>
-                </select>
+                <div class="filter-item">
+                    <label>Style</label>
+                    <select id="filter-style">
+                        <option value="">Tous les styles</option>
+                        <optgroup label="Perruques">
+                            <option value="lisse">Lisse</option>
+                            <option value="boucle">Bouclé</option>
+                            <option value="ondule">Ondulé</option>
+                            <option value="afro">Afro / Crépus</option>
+                        </optgroup>
+                    </select>
+                </div>
 
                 <!-- Color Filter -->
-                <select id="filter-color"
-                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
-                    <option value="">Toutes les couleurs</option>
-                    <option value="noir">Noir</option>
-                    <option value="brun">Brun / Châtain</option>
-                    <option value="blond">Blond</option>
-                    <option value="roux">Roux / Auburn</option>
-                    <option value="colore">Coloré / Ombré</option>
-                </select>
+                <div class="filter-item">
+                    <label>Couleur</label>
+                    <select id="filter-color">
+                        <option value="">Toutes les couleurs</option>
+                        <option value="noir">Noir</option>
+                        <option value="brun">Brun / Châtain</option>
+                        <option value="blond">Blond</option>
+                        <option value="roux">Roux</option>
+                        <option value="colore">Méchées / Ombré</option>
+                    </select>
+                </div>
 
                 <!-- Length Filter -->
-                <select id="filter-length"
-                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
-                    <option value="">Toutes les longueurs</option>
-                    <option value="court">Court</option>
-                    <option value="mi-long">Mi-long</option>
-                    <option value="long">Long</option>
-                </select>
+                <div class="filter-item">
+                    <label>Longueur</label>
+                    <select id="filter-length">
+                        <option value="">Toutes les longueurs</option>
+                        <option value="court">Court</option>
+                        <option value="mi-long">Mi-long</option>
+                        <option value="long">Long</option>
+                    </select>
+                </div>
 
-                <!-- Genre Filter -->
-                <select id="filter-genre"
-                    style="padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
-                    <option value="">Tous les genres</option>
-                    <option value="femme">Femme</option>
-                    <option value="homme">Homme</option>
-                    <option value="enfant">Enfant</option>
-                </select>
-
-                <button id="reset-filters"
-                    style="font-size: 0.9rem; text-decoration: underline; background: none; border: none; cursor: pointer; color: var(--color-text-light);">Réinitialiser</button>
+                <div class="filter-item">
+                    <span id="reset-filters">Réinitialiser</span>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="collection-grid" id="product-grid"
-            style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-top: 2rem;">
+    <div class="container mobile-only"
+        style="margin-top: -1rem; margin-bottom: 2rem; overflow-x: auto; white-space: nowrap; scrollbar-width: none; -webkit-overflow-scrolling: touch;">
+        <div style="display: inline-flex; gap: 0.5rem; padding-bottom: 0.5rem;">
+            <button class="opt-btn active"
+                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 50px;">Tout</button>
+            <button class="opt-btn"
+                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 50px;">Naturel</button>
+            <button class="opt-btn"
+                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 50px;">Synthétique</button>
+            <button class="opt-btn"
+                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 50px;">Accessoires</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="collection-grid" id="product-grid" style="margin-top: 0;">
             <!-- Product 1 -->
             <div class="product-card" data-category="naturel" data-style="ondule" data-color="noir" data-length="long"
                 data-genre="femme">
                 <a href="product.html"
                     style="display: block; position: relative; overflow: hidden; border-radius: 4px; background: #eee;">
-                    <img src="assets/images/product-1.png" alt="Perruque Longue Ondulée"
-                        style="width: 100%; transition: transform 0.3s ease;">
+                    <img src="assets/images/product-1.webp" alt="Perruque Longue Ondulée"
+                        style="width: 100%; transition: transform 0.3s ease;" width="400" height="400" loading="lazy">
                     <span
                         style="position: absolute; top: 10px; left: 10px; background: var(--color-primary); color: white; padding: 2px 8px; font-size: 0.7rem; text-transform: uppercase;">Best-seller</span>
                 </a>
@@ -399,17 +502,59 @@
         </div>
     </footer>
 
+    <!-- Floating Cart Button -->
+    <div class="floating-cart-btn" onclick="toggleCartDrawer()">
+        <i class="ph ph-shopping-bag"></i>
+        <span class="floating-cart-count">0</span>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="drawer-overlay" id="drawer-overlay" onclick="toggleCartDrawer()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3 style="margin: 0; font-size: 1.2rem;">Votre Panier</h3>
+            <button onclick="toggleCartDrawer()"
+                style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <div class="cart-drawer-content">
+            <div id="cart-empty-msg" style="text-align: center; margin-top: 3rem;">
+                <i class="ph ph-shopping-bag-open"
+                    style="font-size: 3rem; color: #eee; margin-bottom: 1rem; display: block;"></i>
+                <p style="color: var(--color-text-light);">Votre panier est vide</p>
+                <a href="shop.html" class="btn btn-outline" style="margin-top: 1rem;">Continuer mes achats</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 700;">
+                <span>Total estimé</span>
+                <span id="drawer-total">0.00 €</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;">VALIDER LA COMMANDE</button>
+        </div>
+    </div>
+
     <script src="assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
+
+            // Mobile Toggle
+            const filterToggle = document.getElementById('mobile-filter-toggle');
+            const filterGrid = document.getElementById('filter-grid');
+
+            if (filterToggle) {
+                filterToggle.addEventListener('click', () => {
+                    filterGrid.classList.toggle('active');
+                });
+            }
 
             // Get all Select Elements
             const selectCategory = document.getElementById('filter-category');
             const selectStyle = document.getElementById('filter-style');
             const selectColor = document.getElementById('filter-color');
             const selectLength = document.getElementById('filter-length');
-            const selectGenre = document.getElementById('filter-genre');
             const resetButton = document.getElementById('reset-filters');
 
             const titleElement = document.querySelector('.shop-header h1');
@@ -428,7 +573,6 @@
                 const style = selectStyle.value;
                 const color = selectColor.value;
                 const length = selectLength.value;
-                const genre = selectGenre.value;
 
                 // Update URL (optional but good for UX)
                 const newUrl = new URL(window.location);
@@ -436,7 +580,6 @@
                 if (style) newUrl.searchParams.set('style', style); else newUrl.searchParams.delete('style');
                 if (color) newUrl.searchParams.set('color', color); else newUrl.searchParams.delete('color');
                 if (length) newUrl.searchParams.set('length', length); else newUrl.searchParams.delete('length');
-                if (genre) newUrl.searchParams.set('genre', genre); else newUrl.searchParams.delete('genre');
                 window.history.replaceState({}, '', newUrl);
 
                 // Update Dynamic SEO Title
@@ -487,9 +630,9 @@
                     } else if (length === 'court') {
                         seoTitleParts.push("Courtes (Bob)");
                     } else if (length === 'mi-long') {
-                         seoTitleParts.push("Mi-Longues");
+                        seoTitleParts.push("Mi-Longues");
                     } else if (length === 'long') {
-                         seoTitleParts.push("Longues");
+                        seoTitleParts.push("Longues");
                     } else {
                         seoTitleParts.push(length + '"');
                     }
@@ -497,7 +640,7 @@
 
                 // Construct Title
                 let pageTitle = seoTitleParts.join(' ');
-                
+
                 // Fallback / Clean up
                 if (pageTitle === "Perruques") pageTitle = "Toutes nos Perruques & Collections";
 
@@ -512,24 +655,46 @@
                     if (style && product.dataset.style !== style) shouldShow = false;
                     if (color && product.dataset.color !== color) shouldShow = false;
                     if (length && product.dataset.length !== length) shouldShow = false;
-                    if (genre && product.dataset.genre !== genre) shouldShow = false;
 
                     product.style.display = shouldShow ? 'block' : 'none';
                 });
             }
 
             // 3. Add Event Listeners
-            const filters = [selectCategory, selectStyle, selectColor, selectLength, selectGenre];
+            const filters = [selectCategory, selectStyle, selectColor, selectLength];
             filters.forEach(filter => {
                 filter.addEventListener('change', applyFilters);
             });
 
             resetButton.addEventListener('click', () => {
                 filters.forEach(f => f.value = "");
+                // Reset quick buttons
+                document.querySelectorAll('.mobile-only .opt-btn').forEach(b => b.classList.remove('active'));
+                document.querySelector('.mobile-only .opt-btn:first-child')?.classList.add('active');
                 applyFilters();
             });
 
-            // 4. Initial Run
+            // 4. Quick Filters (Mobile)
+            document.querySelectorAll('.mobile-only .opt-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.mobile-only .opt-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const cat = btn.textContent.toLowerCase();
+                    if (cat === "tout") {
+                        selectCategory.value = "";
+                    } else if (cat === "naturel") {
+                        selectCategory.value = "naturel";
+                    } else if (cat === "synthétique") {
+                        selectCategory.value = "synthetique";
+                    } else if (cat === "accessoires") {
+                        selectCategory.value = "accessoires";
+                    }
+                    applyFilters();
+                });
+            });
+
+            // 5. Initial Run
             applyFilters();
         });
     </script>

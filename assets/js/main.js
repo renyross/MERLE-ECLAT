@@ -8,7 +8,37 @@ document.addEventListener('DOMContentLoaded', () => {
     initComparisonSlider();
     initFAQ();
     initMobileMenu();
+    initStickyMobileBar();
+    initCartDrawer();
 });
+
+/**
+ * Sticky Mobile Purchase Bar
+ */
+function initStickyMobileBar() {
+    const stickyBar = document.querySelector('.sticky-mobile-bar');
+    const mainAddToCartBtn = document.querySelector('.product-info .btn-primary');
+
+    if (!stickyBar || !mainAddToCartBtn || window.innerWidth > 768) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the main add to cart button is NOT visible, show the sticky bar
+            if (!entry.isIntersecting) {
+                stickyBar.classList.add('active');
+                document.querySelector('.floating-cart-btn')?.classList.add('hidden');
+            } else {
+                stickyBar.classList.remove('active');
+                document.querySelector('.floating-cart-btn')?.classList.remove('hidden');
+            }
+        });
+    }, {
+        threshold: 0,
+        rootMargin: "0px"
+    });
+
+    observer.observe(mainAddToCartBtn);
+}
 
 /**
  * Mobile Menu Toggle
@@ -197,20 +227,49 @@ document.head.insertAdjacentHTML("beforeend", `<style>
 
 
 /**
- * Mock Cart Interaction
+ * Cart Drawer initialization
+ */
+function initCartDrawer() {
+    // Already handled globally by toggleCartDrawer but can add more logic here if needed
+}
+
+function toggleCartDrawer() {
+    const drawer = document.getElementById('cart-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    if (drawer && overlay) {
+        drawer.classList.toggle('active');
+        overlay.classList.toggle('active');
+        if (drawer.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+}
+
+/**
+ * Mock Cart Interaction - Updated for Drawer
  */
 function initCartCounter() {
-    const addToCartButtons = document.querySelectorAll('.btn-outline, .btn-primary');
-    const cartBadge = document.querySelector('.header-icons .icon-btn span');
-    let count = 0;
+    const addToCartButtons = document.querySelectorAll('.btn-outline, .btn-primary, .btn-cart');
+    const cartBadges = document.querySelectorAll('.header-icons .icon-btn span, .floating-cart-count');
+    let count = parseInt(localStorage.getItem('merle_cart_count')) || 0;
+
+    // Sync initial count
+    cartBadges.forEach(b => b.textContent = count);
 
     addToCartButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            // Check if it's an "Add to Cart" button (simple check)
             if (btn.textContent.includes('Ajouter') || btn.textContent.includes('Panier')) {
                 e.preventDefault();
                 count++;
-                cartBadge.textContent = count;
+                localStorage.setItem('merle_cart_count', count);
+                cartBadges.forEach(b => b.textContent = count);
+
+                // Show drawer on add
+                setTimeout(() => {
+                    toggleCartDrawer();
+                }, 500);
 
                 // Visual feedback
                 const originalText = btn.textContent;
