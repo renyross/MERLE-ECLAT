@@ -1934,10 +1934,16 @@ footer li {
         height: 350px;
     }
 
-    .comparison-before img,
     .comparison-after img {
         object-position: center 0% !important;
         transform: scale(1.25) translateY(1%) !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .comparison-before img {
+        object-position: center 0% !important;
+        transform: scale(1.25) translateY(3%) !important;
         width: 100% !important;
         height: 100% !important;
     }
