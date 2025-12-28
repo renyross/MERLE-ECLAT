@@ -3057,7 +3057,7 @@ footer li {
     /* Force background to be full width always */
     .comparison-before img {
         width: 100% !important;
-        object-position: center 20% !important;
+        object-position: center 30% !important;
         transform: scale(1.1) !important;
     }
 
@@ -3065,7 +3065,7 @@ footer li {
     .comparison-after img {
         width: 100vw !important;
         max-width: none !important;
-        object-position: center 20% !important;
+        object-position: center 30% !important;
         transform: scale(1.1) !important;
     }
 
