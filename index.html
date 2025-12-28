@@ -217,10 +217,10 @@
             <div class="circle-collections">
                 <!-- 0. Best Sellers -->
                 <a href="shop.html?category=best-sellers" class="circle-item">
-                    <div class="circle-img-wrapper">
+                    <div class="circle-img-wrapper"><div class="circle-img-inner">
                         <img src="assets/images/best_sellers_new.webp" alt="Nos Best Sellers" width="280" height="280"
                             loading="lazy">
-                    </div>
+                    </div></div>
                     <div class="circle-content">
                         <span class="circle-subtitle">Les Incontournables</span>
                         <h3>Best Sellers</h3>
@@ -231,10 +231,10 @@
 
                 <!-- 1. Cheveux Naturels -->
                 <a href="shop.html?category=naturel" class="circle-item">
-                    <div class="circle-img-wrapper">
+                    <div class="circle-img-wrapper"><div class="circle-img-inner">
                         <img src="assets/images/univers-naturel.webp" alt="Cheveux Naturels" width="280" height="280"
                             loading="lazy">
-                    </div>
+                    </div></div>
                     <div class="circle-content">
                         <span class="circle-subtitle">Collection Prestige</span>
                         <h3>Cheveux Naturels</h3>
@@ -245,10 +245,10 @@
 
                 <!-- 2. Synthétiques Premium -->
                 <a href="shop.html?category=synthetique" class="circle-item">
-                    <div class="circle-img-wrapper">
+                    <div class="circle-img-wrapper"><div class="circle-img-inner">
                         <img src="assets/images/univers-synthetic.webp" alt="Styles Iconiques" width="280" height="280"
                             loading="lazy">
-                    </div>
+                    </div></div>
                     <div class="circle-content">
                         <span class="circle-subtitle">Styles Iconiques</span>
                         <h3>Synthétiques Premium</h3>
@@ -259,10 +259,10 @@
 
                 <!-- 3. Accessoires -->
                 <a href="shop.html?category=accessoires" class="circle-item">
-                    <div class="circle-img-wrapper">
+                    <div class="circle-img-wrapper"><div class="circle-img-inner">
                         <img src="assets/images/circle-accessories-branded.webp" alt="Accessoires de Luxe" width="280"
                             height="280" loading="lazy">
-                    </div>
+                    </div></div>
                     <div class="circle-content">
                         <span class="circle-subtitle">Finitions Parfaites</span>
                         <h3>Accessoires</h3>
@@ -282,7 +282,7 @@
             <p class="text-center" style="margin-bottom: 3rem; color: var(--color-text-light);">Les favoris de notre
                 communauté. Testés, approuvés, adorés.</p>
 
-            <div class="collection-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="collection-grid mobile-carousel">
                 <!-- Product 1: Best-Seller -->
                 <div class="product-card">
                     <div class="product-img-box">
@@ -727,8 +727,8 @@
     <!-- Best Sellers -->
     <section id="produits" class="section-padding" style="background-color: #fcfcfc;">
         <div class="container">
-            <h2 class="section-title">Les Incontournables</h2>
-            <p class="text-center" style="margin-bottom: 3rem; color: var(--color-text-light);">Nos créations les
+            <h2 class="section-title reveal-text">Les Incontournables</h2>
+            <p class="text-center reveal-text" style="animation-delay: 0.2s; margin-bottom: 3rem; color: var(--color-text-light);">Nos créations les
                 plus
                 plébiscitées.</p>
 
@@ -738,7 +738,7 @@
                     <div class="product-img-box">
                         <span class="badge-new">Best-Seller</span>
                         <a href="product.html">
-                            <img src="assets/images/incontournable-1.webp" alt="Perruque Longue Ondulée" width="500"
+                            <img src="assets/images/incontournable-1.webp" alt="L&#39;Ondulée Noire" width="500"
                                 height="500" loading="lazy">
                         </a>
                         <div class="product-actions">
@@ -765,7 +765,7 @@
                 <div class="product-card">
                     <div class="product-img-box">
                         <a href="product.html">
-                            <img src="assets/images/incontournable-2.webp" alt="Carré Plongeant Bordeaux" width="500"
+                            <img src="assets/images/incontournable-2.webp" alt="Le Carré Bordeaux" width="500"
                                 height="500" loading="lazy">
                         </a>
                         <div class="product-actions">
@@ -820,7 +820,7 @@
                 <div class="product-card">
                     <div class="product-img-box">
                         <a href="product.html">
-                            <img src="assets/images/incontournable-4.webp" alt="Blond Platine Lisse" width="500"
+                            <img src="assets/images/incontournable-4.webp" alt="Lisse Platine" width="500"
                                 height="500" loading="lazy">
                         </a>
                         <div class="product-actions">
@@ -845,7 +845,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 3rem;">
-                <a href="shop.html" class="btn btn-primary">Voir Toute la Boutique</a>
+                <a href="shop.html" class="btn btn-primary reveal-text" style="animation-delay: 0.4s;">Voir Toute la Boutique</a>
             </div>
         </div>
     </section>
@@ -974,14 +974,16 @@
     </section>
 
     <!-- Final Conversion CTA -->
-    <section class="section-padding" style="background-color: var(--color-primary); color: white; text-align: center;">
+    <section class="cta-final-section">
         <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Prête à révéler votre éclat ?</h2>
-            <p style="margin-bottom: 2.5rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Rejoignez des milliers de femmes qui ont choisi l'excellence Merle Éclat.
-                Livraison gratuite dès 150 € d'achat.
-            </p>
-            <a href="shop.html" class="btn btn-secondary" style="padding: 1.2rem 3rem;">DÉCOUVRIR LA COLLECTION</a>
+            <div class="cta-final-content">
+                <h2>Prête à révéler votre éclat ?</h2>
+                <p>
+                    Rejoignez des milliers de femmes qui ont choisi l'excellence Merle Éclat.<br>
+                    <strong>Livraison gratuite</strong> dès 150 € d'achat.
+                </p>
+                <a href="shop.html" class="btn-secondary">DÉCOUVRIR LA COLLECTION</a>
+            </div>
         </div>
     </section>
 
@@ -1054,43 +1056,7 @@
         </div>
     </footer>
 
-    <!-- Floating Cart Button -->
-    <div class="floating-cart-btn" onclick="toggleCartDrawer()">
-        <i class="ph ph-shopping-bag"></i>
-        <span class="floating-cart-count">0</span>
-    </div>
 
-    <!-- Cart Drawer -->
-    <div class="drawer-overlay" id="drawer-overlay" onclick="toggleCartDrawer()"></div>
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-drawer-header">
-            <h3 style="margin: 0; font-size: 1.2rem;">Votre Panier</h3>
-            <button onclick="toggleCartDrawer()"
-                style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">
-                <i class="ph ph-x"></i>
-            </button>
-        </div>
-        <div class="cart-drawer-content">
-            <!-- Empty Cart State -->
-            <div id="cart-empty-msg" style="text-align: center; margin-top: 3rem;">
-                <i class="ph ph-shopping-bag-open"
-                    style="font-size: 3rem; color: #eee; margin-bottom: 1rem; display: block;"></i>
-                <p style="color: var(--color-text-light);">Votre panier est vide</p>
-                <a href="shop.html" class="btn btn-outline" style="margin-top: 1rem;">Continuer mes achats</a>
-            </div>
-            <!-- Cart Items would be injected here -->
-        </div>
-        <div class="cart-drawer-footer">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 700;">
-                <span>Total estimé</span>
-                <span id="drawer-total">0.00 €</span>
-            </div>
-            <button class="btn btn-primary" style="width: 100%;">VALIDER LA COMMANDE</button>
-            <p style="font-size: 0.75rem; color: var(--color-text-light); text-align: center; margin-top: 1rem;">
-                Paiement sécurisé · Expédition sous 24h
-            </p>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>

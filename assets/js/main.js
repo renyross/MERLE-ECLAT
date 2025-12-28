@@ -189,7 +189,7 @@ function initStickyHeader() {
  * Simple Scroll Reveal Animation
  */
 function initScrollReveal() {
-    const elementsToReveal = document.querySelectorAll('.collection-card, .product-card, .section-title');
+    const elementsToReveal = document.querySelectorAll('.collection-card, .product-card, .section-title, .circle-item');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
