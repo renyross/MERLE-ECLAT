@@ -3080,7 +3080,19 @@ footer li {
         right: 20px !important;
     }
 
-    .collection-grid {
-        gap: 1.5rem !important;
+    /* 6. Product & Category Image Subject Alignment */
+    .circle-img-wrapper img,
+    .product-img-box img {
+        object-position: center 15% !important;
+        /* Slightly higher focus for heads/hair */
+    }
+
+    .circle-item {
+        margin-bottom: 3rem !important;
+        /* Better spacing between circles */
+    }
+
+    .circle-img-wrapper {
+        margin-bottom: 1.5rem !important;
     }
 }
