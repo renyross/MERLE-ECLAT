@@ -1569,35 +1569,6 @@ footer li {
     color: var(--color-secondary);
 }
 
-@media (max-width: 768px) {
-    .circle-collections {
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto !important;
-        gap: 1.5rem !important;
-        padding: 1rem !important;
-        margin: 0 -1.5rem !important;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .circle-collections::-webkit-scrollbar {
-        display: none;
-    }
-
-    .circle-item {
-        flex: 0 0 280px !important;
-        /* Fixed width for carousel items */
-        scroll-snap-align: center;
-        margin-bottom: 0 !important;
-    }
-
-    .circle-img-wrapper {
-        width: 180px;
-        height: 180px;
-    }
-}
 
 /* ==========================================================================
    Responsive Utilities
@@ -3099,11 +3070,44 @@ footer li {
         /* Slightly higher focus for heads/hair */
     }
 
+    /* 7. Consistent Carousels (Carousel after Carousel) */
+    .circle-collections,
+    .mobile-carousel {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        gap: 1.25rem !important;
+        padding: 1rem 1.25rem 2rem 1.25rem !important;
+        margin: 0 -1.25rem !important;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .circle-collections::-webkit-scrollbar,
+    .mobile-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Circle Items in Carousel */
     .circle-item {
+        flex: 0 0 260px !important;
+        scroll-snap-align: center;
+        margin-bottom: 0 !important;
+    }
+
+    /* Product Cards in Carousel */
+    .mobile-carousel .product-card {
+        flex: 0 0 280px !important;
+        scroll-snap-align: center;
         margin-bottom: 0 !important;
     }
 
     .circle-img-wrapper {
-        margin-bottom: 1.5rem !important;
+        width: 160px !important;
+        height: 160px !important;
+        margin-bottom: 1rem !important;
     }
 }
