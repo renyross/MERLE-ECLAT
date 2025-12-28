@@ -1937,15 +1937,14 @@ footer li {
     .comparison-after img {
         object-position: center 0% !important;
         transform: scale(1.25) translateY(1%) !important;
-        width: 100% !important;
-        height: 100% !important;
+        width: 100vw !important;
+        /* Fix: Force width to viewport to prevent sliding distortion */
+        max-width: none !important;
     }
 
     .comparison-before img {
         object-position: center 0% !important;
         transform: scale(1.25) translateY(3%) !important;
-        width: 100% !important;
-        height: 100% !important;
     }
 
     .comparison-label {
