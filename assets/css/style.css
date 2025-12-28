@@ -1934,16 +1934,22 @@ footer li {
         height: 350px;
     }
 
+    .comparison-before img,
     .comparison-after img {
         object-position: center 0% !important;
-        transform: scale(1.25) translateY(1%) !important;
-        width: 100vw !important;
-        /* Fix: Force width to viewport to prevent sliding distortion */
+        width: auto;
+        /* Allow JS inline style to take priority */
+        min-width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
         max-width: none !important;
     }
 
+    .comparison-after img {
+        transform: scale(1.25) translateY(1%) !important;
+    }
+
     .comparison-before img {
-        object-position: center 0% !important;
         transform: scale(1.25) translateY(3%) !important;
     }
 
