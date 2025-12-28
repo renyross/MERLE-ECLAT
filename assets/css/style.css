@@ -1571,19 +1571,31 @@ footer li {
 
 @media (max-width: 768px) {
     .circle-collections {
-        gap: 2rem;
-        flex-direction: column;
-        align-items: center;
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        gap: 1.5rem !important;
+        padding: 1rem !important;
+        margin: 0 -1.5rem !important;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .circle-collections::-webkit-scrollbar {
+        display: none;
     }
 
     .circle-item {
-        width: 100%;
-        max-width: 300px;
+        flex: 0 0 280px !important;
+        /* Fixed width for carousel items */
+        scroll-snap-align: center;
+        margin-bottom: 0 !important;
     }
 
     .circle-img-wrapper {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
 }
 
@@ -3088,8 +3100,7 @@ footer li {
     }
 
     .circle-item {
-        margin-bottom: 3rem !important;
-        /* Better spacing between circles */
+        margin-bottom: 0 !important;
     }
 
     .circle-img-wrapper {
