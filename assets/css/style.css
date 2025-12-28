@@ -2977,3 +2977,110 @@ footer li {
         height: 300px;
     }
 }
+
+/* ==========================================================================
+   FINAL MOBILE OPTIMIZATION SWEEP (Fixes for reported bugs)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* 1. Fix Horizontal Overflow & Base Layout */
+    html,
+    body {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .container {
+        padding: 0 1.25rem !important;
+        /* Standardize mobile padding */
+    }
+
+    .section-padding {
+        padding: 4rem 0 !important;
+        /* Reduce excessive spacing */
+    }
+
+    /* 2. Header & Navigation Fixes */
+    .header {
+        height: 60px !important;
+    }
+
+    .logo {
+        margin: 0 !important;
+        /* Reset desktop margins */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        font-size: 1.1rem !important;
+    }
+
+    .logo img {
+        height: 35px !important;
+    }
+
+    .header-icons {
+        margin: 0 !important;
+        right: 1.25rem !important;
+        gap: 1.25rem !important;
+    }
+
+    .mobile-toggle {
+        left: 0.75rem !important;
+    }
+
+    /* 3. Hero Section Fixes */
+    .hero-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 1.5rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+        padding: 0 1rem !important;
+    }
+
+    /* 4. Comparison Slider Robust Fix */
+    .comparison-slider {
+        height: 320px !important;
+        border-radius: 12px !important;
+    }
+
+    .comparison-before img,
+    .comparison-after img {
+        height: 100% !important;
+        object-fit: cover !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    /* Force background to be full width always */
+    .comparison-before img {
+        width: 100% !important;
+        object-position: center 20% !important;
+        transform: scale(1.1) !important;
+    }
+
+    /* Foreground image must also be full width of the slider to align */
+    .comparison-after img {
+        width: 100vw !important;
+        max-width: none !important;
+        object-position: center 20% !important;
+        transform: scale(1.1) !important;
+    }
+
+    /* 5. UI Elements Fixes */
+    .section-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+
+    .floating-cart-btn {
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+
+    .collection-grid {
+        gap: 1.5rem !important;
+    }
+}
