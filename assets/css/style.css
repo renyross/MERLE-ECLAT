@@ -95,10 +95,17 @@ a {
    Layout & Components
    ========================================================================== */
 .container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 2rem;
     width: 100%;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    /* Mobile default padding */
+}
+
+@media (min-width: 1025px) {
+    .container {
+        max-width: var(--container-width);
+        padding: 0 2rem;
+    }
 }
 
 .btn {
@@ -156,15 +163,20 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: var(--header-height);
+    height: 60px;
+    /* Mobile height */
     background-color: var(--color-white);
-    /* Changed to White per user request */
-    backdrop-filter: none;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     transition: var(--transition-fast);
+}
+
+@media (min-width: 1025px) {
+    .header {
+        height: var(--header-height);
+    }
 }
 
 .header-inner {
@@ -201,20 +213,53 @@ body {
 }
 
 .nav-links {
-    display: flex;
-    gap: 2rem;
-    /* Removed absolute positioning to prevent overlap issues */
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 85%;
+    height: 100vh;
+    background-color: var(--color-white);
+    flex-direction: column;
+    padding: 5rem 1.5rem 2rem 1.5rem;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+.nav-links.active {
+    left: 0;
+}
+
+@media (min-width: 1025px) {
+    .nav-links {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+        left: auto;
+        background: transparent;
+        display: flex;
+        gap: 2rem;
+    }
 }
 
 .header-icons {
     display: flex;
-    gap: 1.5rem;
-    font-size: 1.2rem;
-    margin-left: 4rem;
-    /* Match space from logo */
-    margin-right: -4.5rem;
-    /* Shift more to the right per user request */
+    gap: 1.25rem;
+    font-size: 1.25rem;
     color: var(--color-primary);
+    margin-left: auto;
+}
+
+@media (min-width: 1025px) {
+    .header-icons {
+        margin-left: 4rem;
+        margin-right: -2rem;
+        /* Slight shift right on desktop */
+    }
 }
 
 .nav-item {
@@ -334,127 +379,21 @@ body {
     vertical-align: middle;
 }
 
-/* Specific adjustment for smaller screens if needed (simple hide) */
-@media (max-width: 1024px) {
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--color-white);
-        flex-direction: column;
-        justify-content: flex-start;
-        /* Changed from center to allow scrolling */
-        align-items: center;
-        /* Keep items centered horizontally */
-        gap: 0;
-        /* Remove gap, handle spacing via padding in items */
-        z-index: 999;
-        transform: translateY(-100%);
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        display: flex;
-        opacity: 0;
-        visibility: hidden;
-        overflow-y: auto;
-        /* Allow scrolling if menu is tall */
-        padding-top: 5rem;
-        /* Space for close button/header */
-        padding-bottom: 2rem;
-    }
+/* Mobile Toggle Button (Visible by default on mobile) */
+.mobile-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    z-index: 1002;
+    padding: 0.5rem;
+}
 
-    .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-        display: flex;
-        /* Ensure it overrides any specific display:none */
-    }
-
-    .nav-links .nav-item {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.4s ease;
-        padding: 1.5rem 0;
-        /* Added padding for touch targets and spacing */
-        width: 100%;
-        /* Ensure full width */
-        border-bottom: 1px solid var(--color-border);
-        /* Separators */
-    }
-
-    .nav-links.active .nav-item {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: 0.2s;
-    }
-
-    /* Staggered delay for items */
-    .nav-links.active .nav-item:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-
-    .nav-links.active .nav-item:nth-child(2) {
-        transition-delay: 0.2s;
-    }
-
-    .nav-links.active .nav-item:nth-child(3) {
-        transition-delay: 0.3s;
-    }
-
-    .nav-links.active .nav-item:nth-child(4) {
-        transition-delay: 0.4s;
-    }
-
-    .nav-links.active .nav-item:nth-child(5) {
-        transition-delay: 0.5s;
-    }
-
-    .nav-links .nav-link {
-        font-size: 1.5rem;
-        /* Larger font for mobile */
-        font-weight: 600;
-    }
-
-    .nav-links .mega-menu {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border: none;
-        padding: 0;
+@media (min-width: 1025px) {
+    .mobile-toggle {
         display: none;
-        /* Hidden by default */
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        background: transparent;
-    }
-
-    /* Show mega menu when parent is open */
-    .nav-item.open .mega-menu {
-        display: block;
-        animation: fadeIn 0.3s ease;
-    }
-
-    .mega-menu .mega-column {
-        min-width: unset;
-        margin-bottom: 1rem;
-        padding-left: 0;
-    }
-
-    .mega-menu h4 {
-        display: block;
-        /* Show headers on mobile */
-        margin-top: 1rem;
-        font-weight: 700;
-    }
-
-    .mega-menu ul li a {
-        padding: 0.5rem 0;
-        /* Increase touch target */
-        color: var(--color-text-light);
-        font-weight: 400;
-        font-size: 1rem;
     }
 }
 
@@ -592,23 +531,34 @@ body {
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    /* Mobile first */
     margin-bottom: 1.5rem;
     color: var(--color-white);
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin-right: auto;
-    /* Push to left */
-    margin-left: 0;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    /* Mobile first */
     color: rgba(255, 255, 255, 0.95);
     margin-bottom: 2.5rem;
     max-width: 600px;
-    margin-right: auto;
-    /* Push to left */
-    margin-left: 0;
+}
+
+@media (min-width: 1025px) {
+    .hero-title {
+        font-size: 3.5rem;
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-right: auto;
+        margin-left: 0;
+    }
 }
 
 .hero-content .btn {
@@ -621,25 +571,19 @@ body {
     color: var(--color-white);
 }
 
-/* Mobile Adjustments for Hero Text (Moved to ensure precedence) */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 1.5rem;
-        /* Reduced further */
-        line-height: 1.2;
-    }
-
-    .hero-subtitle {
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-    }
-}
 
 /* ==========================================================================
    Collections & Sections
    ========================================================================== */
 .section-padding {
-    padding: 8rem 0;
+    padding: 4rem 0;
+    /* Mobile default padding */
+}
+
+@media (min-width: 1025px) {
+    .section-padding {
+        padding: 8rem 0;
+    }
 }
 
 #collections {
@@ -711,10 +655,9 @@ body {
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-links {
         display: none;
-        /* TODO: Mobile Menu */
     }
 
     .hero {
@@ -723,21 +666,8 @@ body {
     }
 
     .hero-content {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1.25rem;
         text-align: center;
-    }
-
-    .hero-subtitle {
-        margin: 0 auto 2.5rem auto;
-    }
-
-    .hero-image-wrapper {
-        width: 100%;
-        height: 50vh;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
     }
 }
 
@@ -755,26 +685,43 @@ body {
 
 .product-carousel {
     display: flex;
-    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
     overflow-x: auto;
-    scroll-behavior: smooth;
-    /* Restored for manual navigation */
-    padding: 1rem 0;
+    overflow-y: hidden;
+    gap: 1.25rem;
+    padding: 1rem 1.25rem 2rem 1.25rem;
+    margin: 0 -1.25rem;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    /* Firefox */
+    -webkit-overflow-scrolling: touch;
 }
 
 .product-carousel::-webkit-scrollbar {
     display: none;
-    /* Chrome/Safari */
 }
 
 .product-card {
-    min-width: 250px;
-    flex: 0 0 calc(33.333% - 1.33rem);
-    /* Force 3 items per view (minus gaps) */
+    flex: 0 0 280px;
+    /* Mobile width default */
+    scroll-snap-align: center;
     background-color: var(--color-white);
     transition: var(--transition-fast);
+}
+
+@media (min-width: 1025px) {
+    .product-carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+    }
+
+    .product-card {
+        flex: none;
+    }
 }
 
 .product-img-box {
@@ -1433,25 +1380,31 @@ footer li {
    ========================================================================== */
 .circle-collections {
     display: flex;
-    justify-content: center;
-    /* Center if they fit */
+    flex-direction: row;
     flex-wrap: nowrap;
-    /* Force single line */
-    gap: 2rem;
-    /* Reduced gap to fit 4 items */
-    margin-top: 2rem;
     overflow-x: auto;
-    /* Allow scroll on small screens */
-    padding-bottom: 1rem;
-    /* Space for scrollbar if needed */
-    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+    gap: 1.25rem;
+    padding: 1rem 1.25rem 2rem 1.25rem;
+    margin: 0 -1.25rem;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    /* Hide scrollbar Firefox */
+    -webkit-overflow-scrolling: touch;
 }
 
 .circle-collections::-webkit-scrollbar {
     display: none;
-    /* Hide scrollbar Chrome/Safari */
+}
+
+@media (min-width: 1025px) {
+    .circle-collections {
+        justify-content: center;
+        overflow-x: visible;
+        margin: 0;
+        padding: 0;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
 }
 
 .circle-item {
@@ -1459,55 +1412,51 @@ footer li {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 280px;
+    flex: 0 0 260px;
+    /* Mobile width default */
+    scroll-snap-align: center;
     text-decoration: none;
-    /* group: hover removed */
 }
 
 .circle-img-wrapper {
-    width: 280px;
-    height: 280px;
+    width: 160px;
+    /* Mobile size default */
+    height: 160px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     border: 1px solid rgba(179, 145, 81, 0.2);
-    /* Subtle gold border */
     transition: var(--transition-smooth);
     position: relative;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Glassy Shine Effect Overlay */
-.circle-img-wrapper::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: rotate(45deg);
-    transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-}
+@media (min-width: 1025px) {
+    .circle-item {
+        flex: 0 0 calc(25% - 1.5rem);
+        max-width: 280px;
+    }
 
-.circle-item:hover .circle-img-wrapper {
-    border-color: var(--color-secondary);
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(179, 145, 81, 0.15);
-    /* Gold tinted glow */
-}
-
-.circle-item:hover .circle-img-wrapper::after {
-    left: 100%;
-    top: 100%;
+    .circle-img-wrapper {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .circle-img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 15% !important;
+    /* Mobile focal point */
     transition: transform 0.6s ease;
+}
+
+@media (min-width: 1025px) {
+    .circle-img-wrapper img {
+        object-position: center center !important;
+    }
 }
 
 .circle-item:hover .circle-img-wrapper img {
@@ -1772,10 +1721,16 @@ footer li {
 .comparison-slider {
     position: relative;
     width: 100%;
-    height: 550px;
+    height: 320px;
+    /* Mobile first */
     overflow: hidden;
     cursor: ew-resize;
-    /* Indicate horizontal resize */
+}
+
+@media (min-width: 1025px) {
+    .comparison-slider {
+        height: 550px;
+    }
 }
 
 /* Before Image (Background) */
@@ -1786,16 +1741,6 @@ footer li {
     width: 100%;
     height: 100%;
     background-color: #f0f0f0;
-}
-
-.comparison-before img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 1%;
-    transform: scale(1.25);
-    /* Augmenté à 25% */
-    display: block;
 }
 
 /* After Image (Foreground, clipped) */
@@ -1812,19 +1757,25 @@ footer li {
     z-index: 2;
 }
 
+.comparison-before img,
 .comparison-after img {
-    width: auto;
-    /* Wait, this needs to match container width OR be forced size */
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 35%;
-    transform: scale(1);
+    object-position: center 30% !important;
+    /* Mobile focal point */
+    transform: scale(1.1);
+    /* Mobile scale */
     display: block;
-    /* Important: We need to make sure this image stays 100% of the slider width even if container is smaller */
-    /* This will be handled by setting explicit width in JS or using simpler technique */
-    max-width: none;
-    /* Allow it to exceed container */
-    /* We will set width via JS to match slider width, or use CSS calc if container is fluid */
+}
+
+@media (min-width: 1025px) {
+
+    .comparison-before img,
+    .comparison-after img {
+        object-position: center 35% !important;
+        transform: scale(1.25);
+    }
 }
 
 /* Label Styles */
@@ -2104,529 +2055,77 @@ footer li {
    ========================================================================== */
 
 /* 1. Mobile Menu Toggle Button (Default Hidden) */
-.mobile-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: var(--color-primary);
-    cursor: pointer;
-    z-index: 1002;
-    padding: 0.5rem;
+/* ==========================================================================
+   Responsive Breakpoints & Mobile Enhancements
+   ========================================================================== */
+
+/* TABLET & UP (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .nav-item:hover .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 }
 
-/* 2. Responsive Breakpoints */
-
-/* --- TABLET (769px to 1024px) --- */
+/* MOBILE SPECIFIC (max-width: 1024px) */
 @media (max-width: 1024px) {
-    .header-inner {
-        padding: 0 1rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-        /* Reduce gap on tablet */
-    }
-
-    .nav-link {
-        font-size: 0.8rem;
-    }
-
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .product-grid,
-    .featured-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 products per row */
-        gap: 1.5rem;
-    }
-}
-
-/* --- MOBILE (max-width: 768px) --- */
-@media (max-width: 768px) {
-
-    /* Navigation: Burger Menu */
-    .mobile-toggle {
-        display: block;
-        position: absolute;
-        left: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    /* Center Logo since Toggle is on left */
     .logo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        margin: 0;
-        z-index: 1002;
-        /* Ensure logo is clickable too */
+        margin: 0 !important;
     }
 
     .logo img {
-        height: 40px;
-        /* Smaller logo for mobile */
-        width: auto;
+        height: 35px !important;
     }
 
-    /* Icons on right - Force Visible */
     .header-icons {
-        position: absolute !important;
-        right: 20px !important;
-        /* Fixed safe distance */
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 1005 !important;
-        display: flex !important;
-        background: transparent !important;
-        width: auto !important;
-        height: auto !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-    }
-
-    .header-icons .icon-btn {
-        color: #000000 !important;
-        /* Force Black */
-        font-size: 1.5rem !important;
-        /* Slightly smaller for mobile */
-        display: block !important;
-        width: auto !important;
-        height: auto !important;
-        text-decoration: none;
-    }
-
-    .header-icons .icon-btn i {
-        display: block !important;
-        /* Ensure icon font renders */
-        color: inherit !important;
-    }
-
-    /* Mobile Menu Drawer */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        /* Hidden by default */
-        width: 85%;
-        height: 100vh;
-        background-color: var(--color-white);
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 5rem 1.5rem 2rem 1.5rem;
-        box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1001;
-        /* Behind toggle but above content */
-        gap: 0;
-        overflow-y: auto;
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-item {
-        width: 100%;
-        border-bottom: 1px solid #f5f5f5;
-    }
-
-    .nav-link {
-        font-size: 1rem;
-        font-weight: 600;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 1.2rem 0;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .nav-link i {
-        transition: transform 0.3s ease;
-    }
-
-    .nav-item.open .nav-link i {
-        transform: rotate(180deg);
-    }
-
-    /* Adjust Mega Menu for Mobile (Accordion style if needed, or simple link) 
-       For now, we might want to hide mega menus or make them clickable sub-menus.
-       Simple fix: Make hover effect click-based or just link to Shop.
-    */
-    .mega-menu {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        padding: 0;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        border-top: none;
-        background: #fafafa;
-        margin-top: 0;
-        overflow: hidden;
+        position: absolute;
+        right: 1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 !important;
+        gap: 1.25rem;
     }
 
     .nav-item.open .mega-menu {
         display: block;
     }
 
-    .mega-column {
-        padding: 1rem;
-    }
-
-    .mega-column h4 {
-        font-size: 0.85rem;
-        margin-bottom: 0.8rem;
-        color: var(--color-secondary);
-    }
-
-    .mega-column ul li a {
-        padding: 0.6rem 0;
-        font-size: 0.9rem;
-    }
-
-    /* Hero Section - Optimized Height */
-    .hero {
-        height: 65vh;
-        /* 60-70% rule */
-        min-height: 450px;
-    }
-
-    .hero-content {
-        padding-top: 8rem;
-        /* Increased to ensure clearance */
-        justify-content: flex-start;
-        /* Push content down from top instead of centering */
-        /* Center content vertically */
-        text-align: center;
-        align-items: center;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-        /* Slightly larger for impact */
-        line-height: 1.1;
-        margin-bottom: 0.5rem;
+    .mega-menu h4 {
+        margin-top: 1rem;
         font-weight: 700;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-subtitle {
         display: block;
-        font-size: 1rem;
-        margin: 0 auto 1.5rem auto;
-        /* Center horizontally */
-        max-width: 90%;
-        text-align: center;
     }
 
-    .hero-cta {
-        flex-direction: column;
-        gap: 0.8rem;
-        width: 100%;
-        align-items: center;
-    }
-
-    .hero-cta .btn {
-        width: 100%;
-        max-width: 280px;
-        padding: 1.2rem;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        animation: pulseCTA 2s infinite;
-    }
-
-    @keyframes pulseCTA {
-        0% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(1.03);
-        }
-
-        100% {
-            transform: scale(1);
-        }
-    }
-
-    /* Reassurance Mobile */
-    .hero-reassurance {
-        font-size: 0.7rem !important;
-        margin-top: 1.2rem !important;
-        background: rgba(255, 255, 255, 0.05);
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-        backdrop-filter: blur(5px);
-    }
-
-    /* Section Titles Mobile */
-    h2.section-title {
-        font-size: 1.6rem !important;
-        margin-bottom: 2rem !important;
-        letter-spacing: 1px;
-    }
-
-    /* Reduce circle sizes on mobile */
-    .circle-img-wrapper {
-        width: 140px;
-        /* Reduced from 200px/280px */
-        height: 140px;
-    }
-
-    .circle-item {
-        max-width: 160px;
-    }
-
-    /* Products - 2 Columns for better visibility */
-    .product-grid,
-    .featured-grid,
-    .collection-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        /* Force 2 columns */
-        gap: 0.8rem !important;
-        /* Smaller gap */
-        padding: 0 0.5rem;
-    }
-
-    .product-info h3 {
-        font-size: 0.85rem;
-        height: 2.5rem;
-        overflow: hidden;
-    }
-
-    .product-micro-desc {
-        display: none;
-        /* Hide desc on mobile grid to save space */
-    }
-
-    .price {
-        font-size: 0.95rem;
-    }
-
-    .btn-cart {
-        padding: 0.7rem;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        border-radius: 4px;
-        transition: transform 0.2s ease;
-    }
-
-    .btn-cart:active {
-        transform: scale(0.95);
-    }
-
-    /* Image Micro-interaction */
-    .product-img-box img {
-        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .product-card:active .product-img-box img {
-        transform: scale(1.05);
-    }
-
-    /* Sticky Mobile Bar */
-    .sticky-mobile-bar {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: var(--color-white);
-        padding: 1rem 1.5rem;
-        box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.08);
-        z-index: 2000;
-        transform: translateY(100%);
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border-top: 1px solid #f0f0f0;
-    }
-
-    .sticky-mobile-bar.active {
-        transform: translateY(0);
-    }
-
-    .sticky-bar-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .sticky-info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sticky-title {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: var(--color-primary);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .sticky-price {
-        font-size: 1rem;
-        color: var(--color-secondary);
-        font-weight: 600;
-    }
-
-    .sticky-add-btn {
-        padding: 0.8rem 1.5rem !important;
-        font-size: 0.8rem !important;
-        min-width: 120px;
-    }
-
-    /* Adjust page padding for sticky bar */
-    .product-page {
-        padding-bottom: 80px;
-    }
-
-    /* Product Card adjustments */
-    .product-card {
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .product-info h3 {
-        font-size: 0.9rem;
-        /* Smaller title */
-    }
-
-    .price {
-        font-size: 0.9rem;
-    }
-
-    /* Sticky CTA (Optional implementation) */
-    /* 
-    .sticky-mobile-cta {
-        position: fixed;
-        bottom: 1rem;
-        left: 1rem;
-        right: 1rem;
-        z-index: 9999;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    */
-
-    /* Mobile Carousel Logic */
-    .mobile-carousel {
-        display: flex !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory;
-        gap: 1rem !important;
-        padding: 0.5rem 1rem 1.5rem 1rem !important;
-        margin: 0 -1.5rem !important;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .mobile-carousel::-webkit-scrollbar {
-        display: none;
-    }
-
-    .mobile-carousel .product-card {
-        flex: 0 0 75%;
-        /* View 1.5 cards approx */
-        scroll-snap-align: center;
-        margin-bottom: 0;
-    }
-
-    /* Card Mini-Rating */
-    .card-rating {
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-        font-size: 0.7rem;
-        color: #f7b944;
-        margin-bottom: 0.3rem;
-    }
-
-    .card-rating span {
-        color: var(--color-text-light);
+    /* Comparison Label Mobile */
+    .comparison-label {
+        top: 1rem;
+        padding: 0.3rem 0.8rem;
         font-size: 0.65rem;
     }
-}
 
-/* Ensure Collection Grid is also responsive */
-@media (max-width: 1024px) {
-
-    .collection-grid,
-    #product-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+    .label-before {
+        right: 1rem;
     }
-}
 
-/* Floating Cart Bubble */
-.floating-cart-btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    z-index: 1500;
-    cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+    .label-after {
+        left: 1rem;
+    }
 
-.floating-cart-btn:hover {
-    transform: scale(1.1);
-}
+    .handle-circle {
+        width: 35px !important;
+        height: 35px !important;
+    }
 
-.floating-cart-btn i {
-    font-size: 1.5rem;
-}
-
-.floating-cart-count {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--color-secondary);
-    color: var(--color-primary);
-    font-size: 0.7rem;
-    font-weight: 700;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Cart Drawer */
-.cart-drawer {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 400px;
-    height: 100vh;
-    background: white;
-    z-index: 3000;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-drawer.active {
-    right: 0;
+    .floating-cart-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
 }
 
 .cart-drawer-header {
@@ -3110,4 +2609,139 @@ footer li {
         height: 160px !important;
         margin-bottom: 1rem !important;
     }
+}
+/* ==========================================================================
+   Engagement Section - Premium Design
+   ========================================================================== */
+.engagement-premium .engagement-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.25rem;
+}
+
+.engagement-item {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.engagement-icon {
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    flex-shrink: 0;
+}
+
+.engagement-item h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.engagement-text p {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+@media (min-width: 1025px) {
+    .engagement-premium .engagement-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        flex-direction: row;
+    }
+
+    .engagement-item {
+        flex-direction: column;
+        text-align: center;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .engagement-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .engagement-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================================================
+   Univers Section (Bento Grid)
+   ========================================================================== */
+.univers-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.univers-card {
+    position: relative;
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 300px;
+    color: white;
+}
+
+@media (min-width: 1025px) {
+    .univers-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        height: 600px;
+    }
+
+    .univers-card {
+        height: auto;
+    }
+}
+
+.univers-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.univers-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.univers-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media (min-width: 1025px) {
+    .univers-content {
+        padding: 2.5rem;
+    }
+}
+
+.univers-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
 }
