@@ -85,8 +85,7 @@ new_nav_content = """<nav class="nav-links">
 
                 <!-- 4. Best-Sellers (Direct Link) -->
                 <div class="nav-item">
-                    <a href="shop.html?category=best-sellers" class="nav-link"
-                        style="color: var(--color-secondary); font-weight: 600;">Best-Sellers</a>
+                    <a href="shop.html?category=best-sellers" class="nav-link nav-link-highlight">Best-Sellers</a>
                 </div>
 
                 <!-- 5. Blog -->

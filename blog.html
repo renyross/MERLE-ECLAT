@@ -82,119 +82,130 @@
 </head>
 
 <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>LIVRAISON GRATUITE EN FRANCE ET EN EUROPE DÈS 80€ D'ACHAT &nbsp;&bull;&nbsp; </span>
+                <span>LIVRAISON GRATUITE EN FRANCE ET EN EUROPE DÈS 80€ D'ACHAT &nbsp;&bull;&nbsp; </span>
+                <span>LIVRAISON GRATUITE EN FRANCE ET EN EUROPE DÈS 80€ D'ACHAT &nbsp;&bull;&nbsp; </span>
+                <span>LIVRAISON GRATUITE EN FRANCE ET EN EUROPE DÈS 80€ D'ACHAT &nbsp;&bull;&nbsp; </span>
+            </div>
+            <!-- Duplicate for infinite scroll -->
+            <div class="marquee-content">
+                <span>LIVRAISON GRATUITE EN FRANCE ET EN EUROPE DÈS 80€ D'ACHAT &nbsp;&bull;&nbsp; </span>
+                <span>LIVRAISON GRATUITE EN FRANCE ET EN EUROPE DÈS 80€ D'ACHAT &nbsp;&bull;&nbsp; </span>
+                <span>LIVRAISON GRATUITE EN FRANCE ET EN EUROPE DÈS 80€ D'ACHAT &nbsp;&bull;&nbsp; </span>
+                <span>LIVRAISON GRATUITE EN FRANCE ET EN EUROPE DÈS 80€ D'ACHAT &nbsp;&bull;&nbsp; </span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
-        <div class="container header-inner"><button class="mobile-toggle" aria-label="Menu"><i class="ph ph-list"></i></button>
-
-            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Merle Éclat Logo">MERLE ÉCLAT</a>
+        <div class="container header-inner">
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.webp" alt="Merle Éclat Logo" width="180" height="60">MERLE ÉCLAT
+            </a>
             <nav class="nav-links">
-                <!-- 1. Nos Perruques (Merged) -->
-                <div class="nav-item">
-                    <a href="shop.html" class="nav-link">NOS PERRUQUES <i class="ph ph-caret-down"
-                            style="font-size: 0.8rem;"></i></a>
-                    <div class="mega-menu">
-                        <!-- Column 1: Par Collection -->
-                        <div class="mega-column">
-                            <h4>Par Type</h4>
-                            <ul>
-                                <li><a href="shop.html?category=naturel" style="font-weight: 600;">Cheveux Naturels</a>
-                                </li>
-                                <li><a href="shop.html?category=synthetique" style="font-weight: 600;">Cheveux
-                                        Synthétiques</a></li>
-                                <li><a href="shop.html?style=closures" style="font-weight: 600;">Closures / Frontals</a></li>
-                            </ul>
-                        </div>
+                <!-- Mobile Drawer Header -->
+                <div class="menu-drawer-header">
+                    <div class="menu-drawer-logo">
+                        <img src="assets/images/logo.webp" alt="Merle Éclat Logo">
+                    </div>
+                    <button class="menu-close-btn" aria-label="Fermer le menu">
+                        <i class="ph ph-x"></i>
+                    </button>
+                </div>
+                <div class="nav-links-inner">
 
-                        <!-- Column 2: Par Style -->
-                        <div class="mega-column">
-                            <h4>Par Style</h4>
-                            <ul>
-                                <li><a href="shop.html?style=lisse">Lisse / Straight</a></li>
-                                <li><a href="shop.html?style=boucle">Bouclé / Curly</a></li>
-                                <li><a href="shop.html?style=ondule">Ondulé / Wavy</a></li>
-                                <li><a href="shop.html?style=afro">Afro / Kinky</a></li>
-                            </ul>
-                        </div>
+                    <div class="nav-item">
+                        <a href="shop.html" class="nav-link">NOS PERRUQUES <i class="ph ph-caret-down"
+                                style="font-size: 0.8rem;"></i></a>
+                        <div class="mega-menu">
+                            <div class="mega-column">
+                                <h4>Type de cheveux</h4>
+                                <ul>
+                                    <li><a href="shop.html?type=semi-naturel">Perruque cheveux semi-naturels</a></li>
+                                    <li><a href="shop.html?category=naturel">Perruques cheveux naturels</a></li>
+                                    <li><a href="shop.html?category=synthetique">Perruques cheveux synthétiques</a></li>
+                                    <li><a href="shop.html?type=bandeau">perruque bandeau</a></li>
+                                </ul>
 
-                        <!-- Column 3: Par Couleur -->
-                        <div class="mega-column">
-                            <h4>Par Couleur</h4>
-                            <ul>
-                                <li><a href="shop.html?color=noir"><span class="color-swatch"
-                                            style="background-color: #000000;"></span> Noir</a></li>
-                                <li><a href="shop.html?color=brun"><span class="color-swatch"
-                                            style="background-color: #4b3621;"></span> Brun</a></li>
-                                <li><a href="shop.html?color=blond"><span class="color-swatch"
-                                            style="background-color: #f0e68c;"></span> Blond</a></li>
-                                <li><a href="shop.html?color=colore"><span class="color-swatch"
-                                            style="background: linear-gradient(to right, #4b3621, #f0e68c);"></span>
-                                        Méché / Ombré</a></li>
-                            </ul>
-                        </div>
+                                <h4 style="margin-top: 1.5rem;">Longueur des cheveux</h4>
+                                <ul>
+                                    <li><a href="shop.html?length=court">Perruques cheveux courts</a></li>
+                                    <li><a href="shop.html?length=long">Perruques cheveux longs</a></li>
+                                </ul>
+                            </div>
 
-                        <!-- Column 4: Par Longueur -->
-                        <div class="mega-column">
-                            <h4>Par Longueur</h4>
-                            <ul>
-                                <li><a href="shop.html?length=16">16″ pouces</a></li>
-                                <li><a href="shop.html?length=18">18″ pouces</a></li>
-                                <li><a href="shop.html?length=20-22">20″–22″ pouces</a></li>
-                                <li><a href="shop.html?length=24">24″ pouces</a></li>
-                            </ul>
+                            <div class="mega-column">
+                                <h4>Couleur de cheveux</h4>
+                                <ul>
+                                    <li><a href="shop.html?color=blanc">Cheveux Blancs</a></li>
+                                    <li><a href="shop.html?color=blond">Cheveux Blonds</a></li>
+                                    <li><a href="shop.html?color=brun">Cheveux Bruns</a></li>
+                                    <li><a href="shop.html?color=chatain">Cheveux Chatains</a></li>
+                                    <li><a href="shop.html?color=cuivre">Cheveux Cuivrés</a></li>
+                                    <li><a href="shop.html?color=gris">Cheveux Gris</a></li>
+                                    <li><a href="shop.html?color=noir">Cheveux Noirs</a></li>
+                                    <li><a href="shop.html?color=roux">cheveux rousse</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-column">
+                                <h4>par style :</h4>
+                                <ul>
+                                    <li><a href="shop.html?style=lisse">Cheveux Lisse / Straight</a></li>
+                                    <li><a href="shop.html?style=boucle">Cheveux Bouclé / Curly</a></li>
+                                    <li><a href="shop.html?style=ondule">Cheveux Ondulé / Wavy</a></li>
+                                    <li><a href="shop.html?style=afro">Cheveux Afro / Kinky</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3. Accessoires & Soins -->
-                <div class="nav-item">
-                    <a href="shop.html" class="nav-link">Accessoires & Soins <i class="ph ph-caret-down"
-                            style="font-size: 0.8rem;"></i></a>
-                    <div class="mega-menu mega-menu-small">
-                        <div class="mega-column">
-                            <ul style="margin-top: 0.5rem;">
-                                <li><a href="product-bonnet.html">Bonnets et filets</a></li>
-                                <li><a href="product-soin.html">Produits d’entretien</a>
-                                </li>
-                                <li><a href="product-brosse.html">Peignes et brosses</a></li>
-                                <li><a href="shop.html?category=accessoires&type=support">Porte-Perruque & Support</a></li>
-                                <li><a href="shop.html?category=accessoires&type=foulard">Foulard</a></li>
-                                <li><a href="shop.html?category=accessoires&type=turban">Turban</a></li>
-                                <li><a href="shop.html?category=accessoires"
-                                        style="font-weight: 600; text-decoration: underline;">Voir tout les
-                                        accessoires</a></li>
-                            </ul>
+                    <div class="nav-item">
+                        <a href="shop.html" class="nav-link">Accessoires & Soins <i class="ph ph-caret-down"
+                                style="font-size: 0.8rem;"></i></a>
+                        <div class="mega-menu mega-menu-small">
+                            <div class="mega-column">
+                                <ul style="margin-top: 0.5rem;">
+                                    <li><a href="shop.html?category=accessoires&type=bonnet">Bonnets et filets</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=arbre">arbre perruque</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=soin">Produits d'entretien</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=brosse">Peignes et brosses</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=support">Porte-Perruque &
+                                            Support</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=foulard">Foulard</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=turban">Turban</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=bandeau">Bandeau</a></li>
+                                    <li><a href="shop.html?category=accessoires"
+                                            style="font-weight: 600; text-decoration: underline; margin-top: 0.5rem; display: inline-block;">Voir
+                                            tous les
+                                            accessoires</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+                    <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
 
-                <!-- 4. Best-Sellers (Direct Link) -->
-                <div class="nav-item">
-                    <a href="shop.html?category=best-sellers" class="nav-link"
-                        style="color: var(--color-secondary); font-weight: 600;">Best-Sellers</a>
                 </div>
-
-                <!-- 5. Blog -->
-                <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
             </nav>
-
             <div class="header-icons">
                 <a href="#" class="icon-btn"><i class="ph ph-magnifying-glass"></i></a>
                 <a href="#" class="icon-btn"><i class="ph ph-user"></i></a>
                 <a href="#" class="icon-btn" style="position: relative;">
                     <i class="ph ph-shopping-bag"></i>
-                    <span
+                    <span id="cart-count-badge"
                         style="position: absolute; top: -5px; right: -8px; background: var(--color-secondary); color: var(--color-primary); font-size: 0.6rem; padding: 2px 5px; border-radius: 50%; font-weight: 700;">0</span>
                 </a>
             </div>
         </div>
     </header>
-
-    <div class="blog-header">
-        <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Le Journal</h1>
-            <p style="color: var(--color-text-light);">Conseils, tendances et secrets de beauté.</p>
-        </div>
-    </div>
 
     <main class="container">
         <div class="blog-grid">

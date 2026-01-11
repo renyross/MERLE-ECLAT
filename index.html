@@ -52,110 +52,106 @@
 </head>
 
 <body>
-
     <!-- Header -->
     <header class="header">
         <div class="container header-inner">
-            <button class="mobile-toggle" aria-label="Menu"><i class="ph ph-list"></i></button>
-            <a href="index.html" class="logo"><img src="assets/images/logo.webp" alt="Merle Éclat Logo" width="180"
-                    height="60">MERLE ÉCLAT</a>
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.webp" alt="Merle Éclat Logo" width="180" height="60">MERLE ÉCLAT
+            </a>
             <nav class="nav-links">
-                <!-- 1. Nos Perruques (Merged) -->
-                <div class="nav-item">
-                    <a href="shop.html" class="nav-link">NOS PERRUQUES <i class="ph ph-caret-down"
-                            style="font-size: 0.8rem;"></i></a>
-                    <div class="mega-menu">
-                        <!-- Column 1: Par Collection -->
-                        <div class="mega-column">
-                            <h4>Par Type</h4>
-                            <ul>
-                                <li><a href="shop.html?category=naturel" style="font-weight: 600;">Cheveux Naturels</a>
-                                </li>
-                                <li><a href="shop.html?category=synthetique" style="font-weight: 600;">Cheveux
-                                        Synthétiques</a></li>
-                                <li><a href="shop.html?style=closures" style="font-weight: 600;">Closures / Frontals</a>
-                                </li>
-                            </ul>
-                        </div>
+                <!-- Mobile Drawer Header -->
+                <div class="menu-drawer-header">
+                    <div class="menu-drawer-logo">
+                        <img src="assets/images/logo.webp" alt="Merle Éclat Logo">
+                    </div>
+                    <button class="menu-close-btn" aria-label="Fermer le menu">
+                        <i class="ph ph-x"></i>
+                    </button>
+                </div>
+                <div class="nav-links-inner">
 
-                        <!-- Column 2: Par Style -->
-                        <div class="mega-column">
-                            <h4>Par Style</h4>
-                            <ul>
-                                <li><a href="shop.html?style=lisse">Lisse / Straight</a></li>
-                                <li><a href="shop.html?style=boucle">Bouclé / Curly</a></li>
-                                <li><a href="shop.html?style=ondule">Ondulé / Wavy</a></li>
-                                <li><a href="shop.html?style=afro">Afro / Kinky</a></li>
-                            </ul>
-                        </div>
+                    <div class="nav-item">
+                        <a href="shop.html" class="nav-link">NOS PERRUQUES <i class="ph ph-caret-down"
+                                style="font-size: 0.8rem;"></i></a>
+                        <div class="mega-menu">
+                            <div class="mega-column">
+                                <h4>Type de cheveux</h4>
+                                <ul>
+                                    <li><a href="shop.html?type=semi-naturel">Perruque cheveux semi-naturels</a></li>
+                                    <li><a href="shop.html?category=naturel">Perruques cheveux naturels</a></li>
+                                    <li><a href="shop.html?category=synthetique">Perruques cheveux synthétiques</a></li>
+                                    <li><a href="shop.html?type=bandeau">perruque bandeau</a></li>
+                                </ul>
 
-                        <!-- Column 3: Par Couleur -->
-                        <div class="mega-column">
-                            <h4>Par Couleur</h4>
-                            <ul>
-                                <li><a href="shop.html?color=noir"><span class="color-swatch"
-                                            style="background-color: #000000;"></span> Noir</a></li>
-                                <li><a href="shop.html?color=brun"><span class="color-swatch"
-                                            style="background-color: #4b3621;"></span> Brun</a></li>
-                                <li><a href="shop.html?color=blond"><span class="color-swatch"
-                                            style="background-color: #f0e68c;"></span> Blond</a></li>
-                                <li><a href="shop.html?color=colore"><span class="color-swatch"
-                                            style="background: linear-gradient(to right, #4b3621, #f0e68c);"></span>
-                                        Méché / Ombré</a></li>
-                            </ul>
-                        </div>
+                                <h4 style="margin-top: 1.5rem;">Longueur des cheveux</h4>
+                                <ul>
+                                    <li><a href="shop.html?length=court">Perruques cheveux courts</a></li>
+                                    <li><a href="shop.html?length=long">Perruques cheveux longs</a></li>
+                                </ul>
+                            </div>
 
-                        <!-- Column 4: Par Longueur -->
-                        <div class="mega-column">
-                            <h4>Par Longueur</h4>
-                            <ul>
-                                <li><a href="shop.html?length=16">16″ pouces</a></li>
-                                <li><a href="shop.html?length=18">18″ pouces</a></li>
-                                <li><a href="shop.html?length=20-22">20″–22″ pouces</a></li>
-                                <li><a href="shop.html?length=24">24″ pouces</a></li>
-                            </ul>
+                            <div class="mega-column">
+                                <h4>Couleur de cheveux</h4>
+                                <ul>
+                                    <li><a href="shop.html?color=blanc">Cheveux Blancs</a></li>
+                                    <li><a href="shop.html?color=blond">Cheveux Blonds</a></li>
+                                    <li><a href="shop.html?color=brun">Cheveux Bruns</a></li>
+                                    <li><a href="shop.html?color=chatain">Cheveux Chatains</a></li>
+                                    <li><a href="shop.html?color=cuivre">Cheveux Cuivrés</a></li>
+                                    <li><a href="shop.html?color=gris">Cheveux Gris</a></li>
+                                    <li><a href="shop.html?color=noir">Cheveux Noirs</a></li>
+                                    <li><a href="shop.html?color=roux">cheveux rousse</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-column">
+                                <h4>par style :</h4>
+                                <ul>
+                                    <li><a href="shop.html?style=lisse">Cheveux Lisse / Straight</a></li>
+                                    <li><a href="shop.html?style=boucle">Cheveux Bouclé / Curly</a></li>
+                                    <li><a href="shop.html?style=ondule">Cheveux Ondulé / Wavy</a></li>
+                                    <li><a href="shop.html?style=afro">Cheveux Afro / Kinky</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 3. Accessoires & Soins -->
-                <div class="nav-item">
-                    <a href="shop.html" class="nav-link">Accessoires & Soins <i class="ph ph-caret-down"
-                            style="font-size: 0.8rem;"></i></a>
-                    <div class="mega-menu mega-menu-small">
-                        <div class="mega-column">
-                            <ul style="margin-top: 0.5rem;">
-                                <li><a href="product-bonnet.html">Bonnets et filets</a></li>
-                                <li><a href="product-soin.html">Produits d’entretien</a>
-                                </li>
-                                <li><a href="product-brosse.html">Peignes et brosses</a></li>
-                                <li><a href="shop.html?category=accessoires&type=support">Porte-Perruque & Support</a>
-                                </li>
-                                <li><a href="shop.html?category=accessoires&type=foulard">Foulard</a></li>
-                                <li><a href="shop.html?category=accessoires&type=turban">Turban</a></li>
-                                <li><a href="shop.html?category=accessoires"
-                                        style="font-weight: 600; text-decoration: underline;">Voir tout les
-                                        accessoires</a></li>
-                            </ul>
+                    <div class="nav-item">
+                        <a href="shop.html" class="nav-link">Accessoires & Soins <i class="ph ph-caret-down"
+                                style="font-size: 0.8rem;"></i></a>
+                        <div class="mega-menu mega-menu-small">
+                            <div class="mega-column">
+                                <ul style="margin-top: 0.5rem;">
+                                    <li><a href="shop.html?category=accessoires&type=bonnet">Bonnets et filets</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=arbre">arbre perruque</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=soin">Produits d'entretien</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=brosse">Peignes et brosses</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=support">Porte-Perruque &
+                                            Support</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=foulard">Foulard</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=turban">Turban</a></li>
+                                    <li><a href="shop.html?category=accessoires&type=bandeau">Bandeau</a></li>
+                                    <li><a href="shop.html?category=accessoires"
+                                            style="font-weight: 600; text-decoration: underline; margin-top: 0.5rem; display: inline-block;">Voir
+                                            tous les
+                                            accessoires</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+                    <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
 
-                <!-- 4. Best-Sellers (Direct Link) -->
-                <div class="nav-item">
-                    <a href="shop.html?category=best-sellers" class="nav-link"
-                        style="color: var(--color-secondary); font-weight: 600;">Best-Sellers</a>
                 </div>
-
-                <!-- 5. Blog -->
-                <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
             </nav>
-
             <div class="header-icons">
-
+                <a href="#" class="icon-btn"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="#" class="icon-btn"><i class="ph ph-user"></i></a>
                 <a href="#" class="icon-btn" style="position: relative;">
                     <i class="ph ph-shopping-bag"></i>
-                    <span
+                    <span id="cart-count-badge"
                         style="position: absolute; top: -5px; right: -8px; background: var(--color-secondary); color: var(--color-primary); font-size: 0.6rem; padding: 2px 5px; border-radius: 50%; font-weight: 700;">0</span>
                 </a>
             </div>
@@ -187,905 +183,842 @@
         <button class="slider-btn next-btn"><i class="ph ph-caret-right"></i></button>
 
         <div class="container hero-content">
-            <h1 class="hero-title reveal-text" style="color: var(--color-white); font-size: 3.5rem; line-height: 1.1;">
-                L'Excellence<br>du Style Capillaire</h1>
-            <p class="hero-subtitle reveal-text"
-                style="animation-delay: 0.2s; max-width: 650px; font-size: 1.1rem; opacity: 0.95;">
-                Un rendu naturel, un confort absolu<br>
-                Changez de style sans abîmer vos cheveux
-            </p>
+            <h1 class="hero-title reveal-text"
+                style="text-transform: uppercase; letter-spacing: 2px; font-weight: 400;">
+                Révélez votre couronne avec confiance
+            </h1>
 
             <div class="hero-cta reveal-text"
-                style="animation-delay: 0.4s; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;">
-                <a href="shop.html" class="btn btn-primary">ACHETER MAINTENANT</a>
-
-                <p class="hero-reassurance">
-                    <i class="ph ph-shield-check"></i>
-                    <span>Paiement sécurisé · Livraison 24/48h · Retours faciles</span>
-                </p>
+                style="animation-delay: 0.4s; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <a href="shop.html" class="btn btn-outline-white"
+                    style="border: 1px solid #fff; background: transparent; padding: 10px 30px; color: #fff; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">TOUT
+                    VOIR</a>
             </div>
         </div>
     </section>
+
 
     <!-- Collections Categories -->
     <section id="categories" class="section-padding">
         <div class="container">
             <h2 class="section-title reveal-text">Nos Univers</h2>
 
-            <div class="circle-collections">
-                <!-- 0. Best Sellers -->
-                <a href="shop.html?category=best-sellers" class="circle-item">
-                    <div class="circle-img-wrapper">
-                        <div class="circle-img-inner">
-                            <img src="assets/images/best_sellers_new.webp" alt="Nos Best Sellers" width="280"
-                                height="280" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="circle-content">
-                        <span class="circle-subtitle">Les Incontournables</span>
-                        <h3>Best Sellers</h3>
-                        <p>Les coups de cœur de notre communauté.</p>
-                        <span class="circle-link">Découvrir</span>
-                    </div>
-                </a>
+            <div class="slider-wrapper-univers">
+                <button class="univers-nav-btn univers-prev" aria-label="Précédent"><i
+                        class="ph ph-caret-left"></i></button>
 
-                <!-- 1. Cheveux Naturels -->
-                <a href="shop.html?category=naturel" class="circle-item">
-                    <div class="circle-img-wrapper">
-                        <div class="circle-img-inner">
-                            <img src="assets/images/univers-naturel.webp" alt="Cheveux Naturels" width="280"
-                                height="280" loading="lazy">
+                <div class="circle-collections" id="univers-slider">
+                    <!-- 1. Cheveux Naturels -->
+                    <a href="shop.html?category=naturel" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/univers_naturel_clean.png" alt="Cheveux Naturels" width="280"
+                                    height="400" loading="lazy">
+                            </div>
                         </div>
-                    </div>
-                    <div class="circle-content">
-                        <span class="circle-subtitle">Collection Prestige</span>
-                        <h3>Cheveux Naturels</h3>
-                        <p>L’excellence capillaire pour un naturel absolu.</p>
-                        <span class="circle-link">Découvrir</span>
-                    </div>
-                </a>
+                        <div class="circle-content">
+                            <h3>Cheveux Naturels</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
 
-                <!-- 2. Synthétiques Premium -->
-                <a href="shop.html?category=synthetique" class="circle-item">
-                    <div class="circle-img-wrapper">
-                        <div class="circle-img-inner">
-                            <img src="assets/images/univers-synthetic.webp" alt="Styles Iconiques" width="280"
-                                height="280" loading="lazy">
+                    <!-- 2. Cheveux Synthétiques -->
+                    <a href="shop.html?category=synthetique" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/univers_synthetic_clean.png" alt="Cheveux Synthétiques"
+                                    width="280" height="400" loading="lazy">
+                            </div>
                         </div>
-                    </div>
-                    <div class="circle-content">
-                        <span class="circle-subtitle">Styles Iconiques</span>
-                        <h3>Synthétiques Premium</h3>
-                        <p>L'élégance immédiate. Un rendu ultra-réaliste.</p>
-                        <span class="circle-link">Explorer</span>
-                    </div>
-                </a>
+                        <div class="circle-content">
+                            <h3>Cheveux Synthétiques</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
 
-                <!-- 3. Accessoires -->
-                <a href="shop.html?category=accessoires" class="circle-item">
-                    <div class="circle-img-wrapper">
-                        <div class="circle-img-inner">
-                            <img src="assets/images/circle-accessories-branded.webp" alt="Accessoires de Luxe"
-                                width="280" height="280" loading="lazy">
+                    <!-- 3. Closures / Frontals -->
+                    <a href="shop.html?category=closures" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/univers_closures_clean.png" alt="Closures & Frontals"
+                                    width="280" height="400" loading="lazy">
+                            </div>
                         </div>
-                    </div>
-                    <div class="circle-content">
-                        <span class="circle-subtitle">Finitions Parfaites</span>
-                        <h3>Accessoires</h3>
-                        <p>Les essentiels pour une pose parfaite.</p>
-                        <span class="circle-link">Voir tout</span>
-                    </div>
-                </a>
+                        <div class="circle-content">
+                            <h3>Closures / Frontals</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
+
+                    <!-- 4. Accessoires & Soins -->
+                    <a href="shop.html?category=accessoires" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/univers_accessories_clean.png" alt="Accessoires & Soins"
+                                    width="280" height="400" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="circle-content">
+                            <h3>Accessoires & Soins</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
+
+                    <!-- 5. Bonnets et filets -->
+                    <a href="shop.html?category=accessoires&type=bonnet" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/collection_bonnet.png" alt="Bonnets et filets" width="280"
+                                    height="400" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="circle-content">
+                            <h3>Bonnets et filets</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
+
+                    <!-- 6. Peignes et brosses -->
+                    <a href="shop.html?category=accessoires&type=brosse" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/collection_brush.png" alt="Peignes et brosses" width="280"
+                                    height="400" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="circle-content">
+                            <h3>Peignes et brosses</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
+
+                    <!-- 7. Porte-Perruque & Support -->
+                    <a href="shop.html?category=accessoires&type=support" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/collection_wigstand.png" alt="Porte-Perruque & Support"
+                                    width="280" height="400" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="circle-content">
+                            <h3>Porte-Perruque</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
+
+                    <!-- 8. Foulard -->
+                    <a href="shop.html?category=accessoires&type=foulard" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/collection_scarf.png" alt="Foulard" width="280" height="400"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                        <div class="circle-content">
+                            <h3>Foulard</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
+
+                    <!-- 9. Turban -->
+                    <a href="shop.html?category=accessoires&type=turban" class="circle-item">
+                        <div class="circle-img-wrapper">
+                            <div class="circle-img-inner">
+                                <img src="assets/images/collection_turban.png" alt="Turban" width="280" height="400"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                        <div class="circle-content">
+                            <h3>Turban</h3>
+                            <span class="circle-link">Découvrir</span>
+                        </div>
+                    </a>
+
+                </div>
+                <button class="univers-nav-btn univers-next" aria-label="Suivant"><i
+                        class="ph ph-caret-right"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- Section Nouveautés (Carousel) -->
-    <!-- Section Sélection Signature (ex-Nouveautés) -->
-    <section id="selection-signature" class="section-padding" style="background-color: var(--color-white);">
+    <!-- Quality & Luxury Section -->
+    <section class="quality-section section-padding">
         <div class="container">
-            <h2 class="section-title reveal-text">Nos Best-Sellers Iconiques</h2>
-            <p class="text-center" style="margin-bottom: 3rem; color: var(--color-text-light);">Les favoris de notre
-                communauté. Testés, approuvés, adorés.</p>
+            <div class="quality-grid">
+                <div class="quality-image reveal">
+                    <img src="assets/images/quality_banner.png" alt="Qualité & Luxe Merle Éclat" loading="lazy">
+                </div>
+                <div class="quality-content reveal">
+                    <h2 class="quality-title">Qualité & Luxe</h2>
+                    <p class="quality-text">
+                        Chez Merle Éclat, chaque perruque est conçue comme une pièce d'exception. Notre collection
+                        incarne l'alliance parfaite entre le savoir-faire artisanal et l'élégance moderne, pensée pour
+                        sublimer chaque femme avec un naturel absolu.
+                    </p>
+                    <p class="quality-text">
+                        Nous sélectionnons rigoureusement les matériaux les plus nobles pour garantir une durabilité
+                        exemplaire et un confort souverain. Redécouvrez votre beauté avec une confiance renouvelée,
+                        portée par l'excellence.
+                    </p>
+                    <a href="shop.html" class="btn btn-outline" style="margin-top: 1rem;">DÉCOUVRIR L'EXCELLENCE</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="collection-grid mobile-carousel">
-                <!-- Product 1: Best-Seller -->
-                <div class="product-card">
-                    <div class="product-img-box">
-                        <span class="badge-new" style="background-color: var(--color-secondary);">Best-Seller</span>
+    <!-- New Bestsellers Section (Inspired by Reference) -->
+    <section class="new-bestsellers-section section-padding">
+        <div class="container">
+            <div class="section-header-minimal">
+                <h2>Les Incontournables</h2>
+                <p class="subtitle">Nos créations les plus plébiscitées</p>
+            </div>
+
+            <div class="bestsellers-grid">
+                <!-- Product 1: Perruque Brésilienne (Using Wavy Brown) -->
+                <div class="bestseller-card">
+                    <div class="bestseller-badge">Best-Seller</div>
+                    <div class="bestseller-image-box">
                         <a href="product.html">
-                            <img src="assets/images/product-1-v2.webp" alt="Perruque L'Impériale" width="500"
-                                height="500" loading="lazy">
+                            <img src="assets/images/bestseller_bresilienne_v2.png" alt="Perruque Brésilienne"
+                                loading="lazy">
                         </a>
-                        <div class="product-actions">
-                            <button class="btn-cart"><i class="ph ph-shopping-bag"></i> Ajouter au panier</button>
-                            <button class="action-btn"><i class="ph ph-heart"></i></button>
+                        <div class="bestseller-overlay">
+                            <button class="btn-quick-add">AJOUTER AU PANIER</button>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <h3><a href="product.html">L’Impériale 24" – Lisse Soyeux</a></h3>
-                        <p class="product-micro-desc">Brillance miroir et toucher soie. Le must-have absolu.</p>
-                        <p class="price">249,00 €</p>
+                    <div class="bestseller-info">
+                        <h3><a href="product.html" style="color: inherit; text-decoration: none;">Perruque
+                                Brésilienne</a></h3>
+                        <p class="price">195,00 €</p>
                     </div>
                 </div>
 
-                <!-- Product 2: Tendance -->
-                <div class="product-card">
-                    <div class="product-img-box">
-                        <span class="badge-new">Tendance</span>
+                <!-- Product 2: Perruque Vietnamienne (Using Straight Black) -->
+                <div class="bestseller-card">
+                    <div class="bestseller-badge">Luxe</div>
+                    <div class="bestseller-image-box">
                         <a href="product.html">
-                            <img src="assets/images/product-2-v2.webp" alt="Perruque La Bohème" width="500" height="500"
+                            <img src="assets/images/bestseller_vietnamienne_v2.png" alt="Perruque Vietnamienne"
                                 loading="lazy">
                         </a>
-                        <div class="product-actions">
-                            <button class="btn-cart"><i class="ph ph-shopping-bag"></i> Je la veux</button>
-                            <button class="action-btn"><i class="ph ph-heart"></i></button>
+                        <div class="bestseller-overlay">
+                            <button class="btn-quick-add">AJOUTER AU PANIER</button>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <h3><a href="product.html">La Bohème – Ondulations Naturelles</a></h3>
-                        <p class="product-micro-desc">Volume aérien et boucles souples pour un look "retour de
-                            plage".
+                    <div class="bestseller-info">
+                        <h3><a href="product.html" style="color: inherit; text-decoration: none;">Perruque
+                                Vietnamienne</a></h3>
+                        <p class="price">210,00 €</p>
+                    </div>
+                </div>
+
+                <!-- Product 3: Perruque Bandeau (Using Front View) -->
+                <div class="bestseller-card">
+                    <div class="bestseller-badge">Pratique</div>
+                    <div class="bestseller-image-box">
+                        <a href="product.html">
+                            <img src="assets/images/bestseller_bandeau_v2.png" alt="Perruque Bandeau" loading="lazy">
+                        </a>
+                        <div class="bestseller-overlay">
+                            <button class="btn-quick-add">AJOUTER AU PANIER</button>
+                        </div>
+                    </div>
+                    <div class="bestseller-info">
+                        <h3><a href="product.html" style="color: inherit; text-decoration: none;">Perruque Bandeau</a>
+                        </h3>
+                        <p class="price">125,00 €</p>
+                    </div>
+                </div>
+
+                <!-- Product 4: Closure & Frontal (Using Straight Blonde) -->
+                <div class="bestseller-card">
+                    <div class="bestseller-badge">Indispensable</div>
+                    <div class="bestseller-image-box">
+                        <a href="product.html">
+                            <img src="assets/images/bestseller_closure_v2.png" alt="Closure & Frontal" loading="lazy">
+                        </a>
+                        <div class="bestseller-overlay">
+                            <button class="btn-quick-add">AJOUTER AU PANIER</button>
+                        </div>
+                    </div>
+                    <div class="bestseller-info">
+                        <h3><a href="product.html" style="color: inherit; text-decoration: none;">Closure & Frontal</a>
+                        </h3>
+                        <p class="price">Dès 85,00 €</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="shop.html" class="btn btn-outline"
+                    style="border-color: #000; color: #000; padding: 1rem 3rem;">VOIR TOUTE LA BOUTIQUE</a>
+            </div>
+        </div>
+
+        <!-- Section Video Carousel -->
+        <section class="video-carousel-section">
+            <div class="container">
+                <h2 class="section-title reveal-text">Elles portent Merle Éclat</h2>
+                <!-- UGC Marquee -->
+                <div class="ugc-marquee">
+                    <div class="ugc-track">
+                        <!-- UGC 1 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-1.webp" alt="Client Style Bob" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <div class="ugc-info"><span class="ugc-name">Sarah P.</span><span
+                                        class="ugc-handle">@sarah.in.paris</span></div>
+                            </div>
+                        </div>
+                        <!-- UGC 2 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-2.webp" alt="Client Style Cafe" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@chloe_lifestyle</span>
+                            </div>
+                        </div>
+                        <!-- UGC 3 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-3.webp" alt="Client Style Car" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@beauty_by_lina</span>
+                            </div>
+                        </div>
+                        <!-- UGC 4 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-4.webp" alt="Client Style Afro" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@afro_queen_93</span>
+                            </div>
+                        </div>
+                        <!-- UGC 5 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-5.webp" alt="Client Unboxing" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@marie_glam</span>
+                            </div>
+                        </div>
+                        <!-- UGC 6 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-6.webp" alt="Client Evening Look" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@elise_events</span>
+                            </div>
+                        </div>
+                        <!-- UGC 7 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-7.webp" alt="Client Street Style" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@julie_urban</span>
+                            </div>
+                        </div>
+                        <!-- UGC 8 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-8.webp" alt="Client Mirror Selfie" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@clara_morning</span>
+                            </div>
+                        </div>
+                        <!-- UGC 9 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-9.webp" alt="Client Hair Texture" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@natural_hair_joy</span>
+                            </div>
+                        </div>
+
+                        <!-- UGC 10 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-10.webp" alt="Client Mirror Glam" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@sophie_chic</span>
+                            </div>
+                        </div>
+                        <!-- UGC 11 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-11.webp" alt="Client Car Selfie" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@travel_with_nina</span>
+                            </div>
+                        </div>
+                        <!-- UGC 12 -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-12.webp" alt="Client Outdoor Natural" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@emma_curls</span>
+                            </div>
+                        </div>
+
+                        <!-- Duplicates for Loop (Batch 2) -->
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-1.webp" alt="Client Style Bob" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <div class="ugc-info"><span class="ugc-name">Sarah P.</span><span
+                                        class="ugc-handle">@sarah.in.paris</span></div>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-2.webp" alt="Client Style Cafe" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@chloe_lifestyle</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-3.webp" alt="Client Style Car" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@beauty_by_lina</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-4.webp" alt="Client Style Afro" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@afro_queen_93</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-5.webp" alt="Client Unboxing" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@marie_glam</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-6.webp" alt="Client Evening Look" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@elise_events</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-7.webp" alt="Client Street Style" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@julie_urban</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-8.webp" alt="Client Mirror Selfie" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@clara_morning</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-9.webp" alt="Client Hair Texture" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@natural_hair_joy</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-10.webp" alt="Client Mirror Glam" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@sophie_chic</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-11.webp" alt="Client Car Selfie" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@travel_with_nina</span>
+                            </div>
+                        </div>
+                        <div class="ugc-card">
+                            <img src="assets/images/ugc-12.webp" alt="Client Outdoor Natural" width="260" height="260"
+                                loading="lazy">
+                            <div class="ugc-overlay">
+                                <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
+                                <span class="ugc-handle">@emma_curls</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transformation / Avant-Après Section -->
+        <section class="section-padding before-after-section">
+            <div class="container">
+                <h2 class="section-title reveal-text text-center">Métamorphose Immédiate</h2>
+                <div class="transformation-text"
+                    style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">
+                    <p style="color: var(--color-text-light); line-height: 1.6; font-size: 1.1rem;">Glissez pour révéler
+                        la
+                        magie. Passez d'un style quotidien à une allure d'exception en un geste.</p>
+                </div>
+
+                <div class="comparison-slider-wrapper">
+                    <div class="comparison-slider">
+                        <!-- Image Left (Foreground/Overlay) - This is visually the LEFT side -->
+                        <div class="comparison-after">
+                            <img src="assets/images/transformation_braids_before.png" alt="Avant - Naturel" width="900"
+                                height="550" loading="lazy">
+                            <span class="comparison-label label-after">Avant - Tresses Naturelles</span>
+                        </div>
+                        <!-- Image Right (Background) - This is visually the RIGHT side -->
+                        <div class="comparison-before">
+                            <img src="assets/images/transformation_braids_after.png" alt="Après - Style Merle Éclat"
+                                width="900" height="550" loading="lazy">
+                            <span class="comparison-label label-before">Après - Style Merle Éclat</span>
+                        </div>
+                        <!-- Handle -->
+                        <div class="comparison-handle">
+                            <div class="handle-line"></div>
+                            <div class="handle-circle">
+                                <i class="ph ph-arrows-left-right"></i>
+                            </div>
+                            <div class="handle-line"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem;">
+                    <a href="shop.html" class="btn btn-primary">Je Veux Ma Transformation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="assets/images/best_sellers_new.webp" alt="La Fondatrice Merle Éclat" width="600"
+                            height="800" loading="lazy"
+                            style="border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover;">
+                    </div>
+                    <div class="about-content">
+                        <span class="about-subtitle">Le Mot de la Fondatrice</span>
+                        <h2>"Votre Confiance est Ma Plus Belle Création"</h2>
+                        <p>« J'ai fondé Merle Éclat avec une conviction intime : chaque femme mérite de se sentir
+                            puissante
+                            et libre. Passionnée par la haute coiffure, je ne trouvais pas d'alternative qui alliait
+                            <strong>naturalité parfaite</strong> et <strong>confort absolu</strong>.
                         </p>
-                        <p class="price">189,00 €</p>
+                        <p>J'ai donc créé ce que je rêvais de porter : des pièces d'exception, invisibles à l'œil nu,
+                            qui ne
+                            sont pas de simples accessoires, mais de véritables révélateurs de personnalité. Ici, nous
+                            ne
+                            vendons pas seulement des cheveux, nous célébrons l'audace d'être soi-même. »</p>
+
+                        <div class="founder-signature" style="margin-top: 2rem; margin-bottom: 2rem;">
+                            <p
+                                style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-style: italic; color: var(--color-primary);">
+                                Merle Éclat</p>
+                        </div>
+
+                        <a href="shop.html" class="btn btn-primary">Découvrir Notre Univers</a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Product 3: Nouveau -->
-                <div class="product-card">
-                    <div class="product-img-box">
-                        <span class="badge-new" style="background-color: #000;">Nouveau</span>
-                        <a href="product.html">
-                            <img src="assets/images/product-3-v2.webp" alt="Perruque Le Carré Chic" width="500"
-                                height="500" loading="lazy">
-                        </a>
-                        <div class="product-actions">
-                            <button class="btn-cart"><i class="ph ph-shopping-bag"></i> Craquer maintenant</button>
-                            <button class="action-btn"><i class="ph ph-heart"></i></button>
+        <!-- Engagement Section Premium (Reference Image Style) -->
+        <section class="engagement-premium"
+            style="background-color: #f2f2f2; border-top: 1px solid #e5e5e5; padding: 3rem 0;">
+            <div class="container" style="max-width: 1400px;"> <!-- Wider container for 4 cols -->
+                <div class="engagement-grid">
+                    <!-- 1. Service Client -->
+                    <div class="engagement-item">
+                        <div class="icon-wrapper">
+                            <i class="ph ph-headset"></i>
+                        </div>
+                        <h3>Service Clients Réactif</h3>
+                        <div class="engagement-text">
+                            <p>Notre équipe est à votre disposition pour toute question sur nos articles ou votre
+                                commande.
+                            </p>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <h3><a href="product.html">Le Carré Signature – Court & Structuré</a></h3>
-                        <p class="product-micro-desc">L'élégance intemporelle. Coupe nette, entretien facile.</p>
-                        <p class="price">159,00 €</p>
+
+                    <!-- 2. Paiements Sécurisés -->
+                    <div class="engagement-item">
+                        <div class="icon-wrapper">
+                            <i class="ph ph-credit-card"></i>
+                        </div>
+                        <h3>Paiements Sécurisés</h3>
+                        <div class="engagement-text">
+                            <p>Rapide et sécurisé par carte</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Livraison Express -->
+                    <div class="engagement-item">
+                        <div class="icon-wrapper">
+                            <i class="ph ph-truck"></i>
+                        </div>
+                        <h3>Livraison Express</h3>
+                        <div class="engagement-text">
+                            <p>Nos délais de livraison sont de 7 à 11 jours ouvrables pour la France et de 4 à 11 jours
+                                dans
+                                le reste de l'Europe !</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Satisfait ou Remboursé -->
+                    <div class="engagement-item">
+                        <div class="icon-wrapper">
+                            <i class="ph ph-arrow-counter-clockwise"></i>
+                        </div>
+                        <h3>Satisfait ou Remboursé</h3>
+                        <div class="engagement-text">
+                            <p>Nous proposons la garantie Satisfait ou Remboursé pendant 30 jours après réception des
+                                articles !</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Product 4: Édition Limitée -->
-                <div class="product-card">
-                    <div class="product-img-box">
-                        <span class="badge-new" style="background-color: var(--color-primary);">Édition
-                            Limitée</span>
-                        <a href="product.html">
-                            <img src="assets/images/product-4-v2.webp" alt="Perruque L'Authentique" width="500"
-                                height="500" loading="lazy">
-                        </a>
-                        <div class="product-actions">
-                            <button class="btn-cart"><i class="ph ph-shopping-bag"></i> Commander</button>
-                            <button class="action-btn"><i class="ph ph-heart"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3><a href="product.html">L'Authentique – Afro Naturel</a></h3>
-                        <p class="product-micro-desc">Volume et texture réaliste. Sublimez votre beauté naturelle.
+
+
+
+
+        <!-- Customer Reviews (Infinite Scroll) -->
+        <section class="section-padding" style="overflow: hidden;">
+            <h2 class="section-title">Elles nous font confiance</h2>
+
+            <div class="reviews-marquee">
+                <div class="reviews-track">
+                    <!-- Batch 1 -->
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Une qualité incroyable, les mèches sont douces et soyeuses. Je ne peux plus m'en passer !"
                         </p>
-                        <p class="price">129,00 €</p>
+                        <span class="author">- Sophie M.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Le packaging est sublime, tout est arrivé en parfait état. Une vraie expérience de luxe."
+                        </p>
+                        <span class="author">- Kamila D.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Livraison super rapide et produit conforme à la description. Je recommande à 100%."</p>
+                        <span class="author">- Julie T.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"J'adore le volume de la perruque Afro Kinky, le rendu est ultra naturel."</p>
+                        <span class="author">- Aïssa B.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Le service client est au top, merci pour les conseils personnalisés."</p>
+                        <span class="author">- Claire L.</span>
+                    </div>
+
+                    <!-- Batch 2 (Duplicate for infinite loop) -->
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Une qualité incroyable, les mèches sont douces et soyeuses. Je ne peux plus m'en passer !"
+                        </p>
+                        <span class="author">- Sophie M.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Le packaging est sublime, tout est arrivé en parfait état. Une vraie expérience de luxe."
+                        </p>
+                        <span class="author">- Kamila D.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Livraison super rapide et produit conforme à la description. Je recommande à 100%."</p>
+                        <span class="author">- Julie T.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"J'adore le volume de la perruque Afro Kinky, le rendu est ultra naturel."</p>
+                        <span class="author">- Aïssa B.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Le service client est au top, merci pour les conseils personnalisés."</p>
+                        <span class="author">- Claire L.</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="shop.html" class="btn btn-outline">Voir toute la collection</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Section Video Carousel -->
-    <section class="video-carousel-section">
-        <div class="container">
-            <h2 class="section-title reveal-text">Elles portent Merle Éclat</h2>
-            <!-- UGC Marquee -->
-            <div class="ugc-marquee">
-                <div class="ugc-track">
-                    <!-- UGC 1 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-1.webp" alt="Client Style Bob" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <div class="ugc-info"><span class="ugc-name">Sarah P.</span><span
-                                    class="ugc-handle">@sarah.in.paris</span></div>
-                        </div>
-                    </div>
-                    <!-- UGC 2 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-2.webp" alt="Client Style Cafe" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@chloe_lifestyle</span>
-                        </div>
-                    </div>
-                    <!-- UGC 3 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-3.webp" alt="Client Style Car" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@beauty_by_lina</span>
-                        </div>
-                    </div>
-                    <!-- UGC 4 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-4.webp" alt="Client Style Afro" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@afro_queen_93</span>
-                        </div>
-                    </div>
-                    <!-- UGC 5 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-5.webp" alt="Client Unboxing" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@marie_glam</span>
-                        </div>
-                    </div>
-                    <!-- UGC 6 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-6.webp" alt="Client Evening Look" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@elise_events</span>
-                        </div>
-                    </div>
-                    <!-- UGC 7 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-7.webp" alt="Client Street Style" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@julie_urban</span>
-                        </div>
-                    </div>
-                    <!-- UGC 8 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-8.webp" alt="Client Mirror Selfie" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@clara_morning</span>
-                        </div>
-                    </div>
-                    <!-- UGC 9 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-9.webp" alt="Client Hair Texture" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@natural_hair_joy</span>
-                        </div>
-                    </div>
 
-                    <!-- UGC 10 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-10.webp" alt="Client Mirror Glam" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@sophie_chic</span>
-                        </div>
-                    </div>
-                    <!-- UGC 11 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-11.webp" alt="Client Car Selfie" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@travel_with_nina</span>
-                        </div>
-                    </div>
-                    <!-- UGC 12 -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-12.webp" alt="Client Outdoor Natural" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@emma_curls</span>
-                        </div>
-                    </div>
 
-                    <!-- Duplicates for Loop (Batch 2) -->
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-1.webp" alt="Client Style Bob" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <div class="ugc-info"><span class="ugc-name">Sarah P.</span><span
-                                    class="ugc-handle">@sarah.in.paris</span></div>
+        <!-- FAQ Section -->
+        <section class="section-padding faq-section">
+            <div class="container">
+                <h2 class="section-title text-center">Questions Fréquentes</h2>
+                <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <button class="faq-toggle">
+                            <span>Quels sont les délais de livraison ?</span>
+                            <i class="ph ph-plus"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Nous expédions généralement vos commandes sous 24 à 48h ouvrées. Une fois expédiée, la
+                                livraison prend 2 à 4 jours ouvrables en France métropolitaine.</p>
                         </div>
                     </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-2.webp" alt="Client Style Cafe" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@chloe_lifestyle</span>
+                    <div class="faq-item">
+                        <button class="faq-toggle">
+                            <span>Puis-je échanger ou retourner mon produit ?</span>
+                            <i class="ph ph-plus"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Oui, vous disposez de 14 jours après réception pour nous retourner votre produit s'il est
+                                dans son état d'origine (non porté, étiquette intacte). Contactez notre service client
+                                pour
+                                la procédure.</p>
                         </div>
                     </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-3.webp" alt="Client Style Car" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@beauty_by_lina</span>
+                    <div class="faq-item">
+                        <button class="faq-toggle">
+                            <span>Quelle est la différence entre cheveux naturels et synthétiques ?</span>
+                            <i class="ph ph-plus"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Nos cheveux naturels (Human Hair) peuvent être colorés et chauffés comme vos propres
+                                cheveux.
+                                Nos fibres synthétiques premium offrent un style impeccable et durable sans entretien
+                                complexe, mais ne supportent pas les colorations.</p>
                         </div>
                     </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-4.webp" alt="Client Style Afro" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@afro_queen_93</span>
-                        </div>
-                    </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-5.webp" alt="Client Unboxing" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@marie_glam</span>
-                        </div>
-                    </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-6.webp" alt="Client Evening Look" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@elise_events</span>
-                        </div>
-                    </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-7.webp" alt="Client Street Style" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@julie_urban</span>
-                        </div>
-                    </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-8.webp" alt="Client Mirror Selfie" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@clara_morning</span>
-                        </div>
-                    </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-9.webp" alt="Client Hair Texture" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@natural_hair_joy</span>
-                        </div>
-                    </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-10.webp" alt="Client Mirror Glam" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@sophie_chic</span>
-                        </div>
-                    </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-11.webp" alt="Client Car Selfie" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@travel_with_nina</span>
-                        </div>
-                    </div>
-                    <div class="ugc-card">
-                        <img src="assets/images/ugc-12.webp" alt="Client Outdoor Natural" width="260" height="260"
-                            loading="lazy">
-                        <div class="ugc-overlay">
-                            <i class="ph ph-instagram-logo" style="margin-right: 0.5rem; font-size: 1.2rem;"></i>
-                            <span class="ugc-handle">@emma_curls</span>
+                    <div class="faq-item">
+                        <button class="faq-toggle">
+                            <span>Comment entretenir ma perruque ?</span>
+                            <i class="ph ph-plus"></i>
+                        </button>
+                        <div class="faq-content">
+                            <p>Nous recommandons un lavage doux tous les 10 à 15 ports avec nos soins adaptés. Laissez
+                                sécher à l'air libre pour préserver la fibre et la brillance.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Transformation / Avant-Après Section -->
-    <section class="section-padding before-after-section">
-        <div class="container">
-            <h2 class="section-title reveal-text text-center">Métamorphose Immédiate</h2>
-            <div class="transformation-text" style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">
-                <p style="color: var(--color-text-light); line-height: 1.6; font-size: 1.1rem;">Glissez pour révéler la
-                    magie. Passez d'un style quotidien à une allure d'exception en un geste.</p>
-            </div>
-
-            <div class="comparison-slider-wrapper">
-                <div class="comparison-slider">
-                    <!-- Image Left (Foreground) - Clipped -->
-                    <div class="comparison-after">
-                        <img src="assets/images/transformation-before.webp" alt="Avant - Style Quotidien" width="900"
-                            height="550" loading="lazy">
-                        <span class="comparison-label label-after">Avant - Style Quotidien</span>
-                    </div>
-                    <!-- Image Right (Background) -->
-                    <div class="comparison-before">
-                        <img src="assets/images/transformation-after.webp" alt="Après - Style Merle Éclat" width="900"
-                            height="550" loading="lazy">
-                        <span class="comparison-label label-before">Après - Style Merle Éclat</span>
-                    </div>
-                    <!-- Handle -->
-                    <div class="comparison-handle">
-                        <div class="handle-line"></div>
-                        <div class="handle-circle">
-                            <i class="ph ph-arrows-left-right"></i>
-                        </div>
-                        <div class="handle-line"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 4rem;">
-                <a href="shop.html" class="btn btn-primary">Je Veux Ma Transformation</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="assets/images/best_sellers_new.webp" alt="La Fondatrice Merle Éclat" width="600"
-                        height="800" loading="lazy"
-                        style="border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover;">
-                </div>
-                <div class="about-content">
-                    <span class="about-subtitle">Le Mot de la Fondatrice</span>
-                    <h2>"Votre Confiance est Ma Plus Belle Création"</h2>
-                    <p>« J'ai fondé Merle Éclat avec une conviction intime : chaque femme mérite de se sentir
-                        puissante
-                        et libre. Passionnée par la haute coiffure, je ne trouvais pas d'alternative qui alliait
-                        <strong>naturalité parfaite</strong> et <strong>confort absolu</strong>.
-                    </p>
-                    <p>J'ai donc créé ce que je rêvais de porter : des pièces d'exception, invisibles à l'œil nu,
-                        qui ne
-                        sont pas de simples accessoires, mais de véritables révélateurs de personnalité. Ici, nous
-                        ne
-                        vendons pas seulement des cheveux, nous célébrons l'audace d'être soi-même. »</p>
-
-                    <div class="founder-signature" style="margin-top: 2rem; margin-bottom: 2rem;">
-                        <p
-                            style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-style: italic; color: var(--color-primary);">
-                            Merle Éclat</p>
-                    </div>
-
-                    <a href="shop.html" class="btn btn-primary">Découvrir Notre Univers</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Engagement Section Premium -->
-    <section class="engagement-premium section-padding"
-        style="background-color: #fafbfc; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
-        <div class="container">
-            <h2 class="section-title text-center" style="margin-bottom: 4rem;">L'Engagement Merle Éclat</h2>
-
-            <div class="engagement-grid">
-                <!-- 1. Qualité Prestige -->
-                <div class="engagement-item">
-                    <i class="ph ph-crown engagement-icon"></i>
-                    <h3>Qualité Prestige</h3>
-                    <div class="engagement-text">
-                        <p>Cheveux rigoureusement sélectionnés.</p>
-                        <p>Finitions main haute couture.</p>
-                        <p>Durabilité exceptionnelle.</p>
-                    </div>
-                </div>
-
-                <!-- 2. Livraison Express -->
-                <div class="engagement-item">
-                    <i class="ph ph-truck engagement-icon"></i>
-                    <h3>Livraison Express</h3>
-                    <div class="engagement-text">
-                        <p>Expédition en 24/48h.</p>
-                        <p>Suivi de colis en temps réel.</p>
-                        <p>Emballage discret et soigné.</p>
-                    </div>
-                </div>
-
-                <!-- 3. Service Expert -->
-                <div class="engagement-item">
-                    <i class="ph ph-headset engagement-icon"></i>
-                    <h3>Service Expert</h3>
-                    <div class="engagement-text">
-                        <p>Une équipe à votre écoute 7j/7.</p>
-                        <p>Conseils personnalisés gratuits.</p>
-                        <p>Réponse sous quelques heures.</p>
-                    </div>
-                </div>
-
-                <!-- 4. Sérénité Totale -->
-                <div class="engagement-item">
-                    <i class="ph ph-shield-check engagement-icon"></i>
-                    <h3>Sérénité Totale</h3>
-                    <div class="engagement-text">
-                        <p>Satisfait ou échangé.</p>
-                        <p>Retours simplifiés.</p>
-                        <p>Paiement 100% sécurisé.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
 
 
-    <!-- Best Sellers -->
-    <section id="produits" class="section-padding" style="background-color: #fcfcfc;">
-        <div class="container">
-            <h2 class="section-title reveal-text">Les Incontournables</h2>
-            <p class="text-center reveal-text"
-                style="animation-delay: 0.2s; margin-bottom: 3rem; color: var(--color-text-light);">Nos créations les
-                plus
-                plébiscitées.</p>
-
-            <div class="collection-grid mobile-carousel">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-img-box">
-                        <span class="badge-new">Best-Seller</span>
-                        <a href="product.html">
-                            <img src="assets/images/incontournable-1.webp" alt="L&#39;Ondulée Noire" width="500"
-                                height="500" loading="lazy">
-                        </a>
-                        <div class="product-actions">
-                            <button class="btn-cart"><i class="ph ph-shopping-bag"></i> Ajouter au panier</button>
-                            <button class="action-btn"><i class="ph ph-heart"></i></button>
+        <!-- Footer -->
+        <footer style="background-color: var(--color-primary); color: var(--color-white); padding: 4rem 0 2rem 0;">
+            <div class="container">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                    <div>
+                        <h3 style="color: var(--color-white); font-size: 1.5rem; margin-bottom: 1.5rem;">MERLE ÉCLAT
+                        </h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">L'élégance à portée de clic.
+                            Sublimez
+                            votre beauté avec nos perruques d'exception.</p>
+                        <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                            <a href="https://facebook.com" target="_blank" aria-label="Facebook"
+                                style="color: var(--color-white); font-size: 1.5rem; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--color-secondary)'"
+                                onmouseout="this.style.color='var(--color-white)'"><i
+                                    class="ph ph-facebook-logo"></i></a>
+                            <a href="https://instagram.com" target="_blank" aria-label="Instagram"
+                                style="color: var(--color-white); font-size: 1.5rem; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--color-secondary)'"
+                                onmouseout="this.style.color='var(--color-white)'"><i
+                                    class="ph ph-instagram-logo"></i></a>
+                            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"
+                                style="color: var(--color-white); font-size: 1.5rem; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--color-secondary)'"
+                                onmouseout="this.style.color='var(--color-white)'"><i class="ph ph-tiktok-logo"></i></a>
+                            <a href="https://youtube.com" target="_blank" aria-label="YouTube"
+                                style="color: var(--color-white); font-size: 1.5rem; transition: color 0.3s;"
+                                onmouseover="this.style.color='var(--color-secondary)'"
+                                onmouseout="this.style.color='var(--color-white)'"><i
+                                    class="ph ph-youtube-logo"></i></a>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <h3><a href="product.html">L'Ondulée Noire</a></h3>
-                        <div class="card-rating">
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <span>(48)</span>
-                        </div>
-                        <p class="product-micro-desc">Cheveux Naturels · 22 pouces</p>
-                        <p class="price">189,00 €</p>
+                    <div>
+                        <h4 style="color: var(--color-white); margin-bottom: 1.5rem;">Navigation</h4>
+                        <ul
+                            style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 2; list-style: none; padding: 0;">
+                            <li><a href="index.html" style="color: inherit;">Accueil</a></li>
+                            <li><a href="shop.html" style="color: inherit;">Boutique</a></li>
+                            <li><a href="#about" style="color: inherit;">À Propos</a></li>
+                            <li><a href="#contact" style="color: inherit;">Contact</a></li>
+                        </ul>
                     </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-img-box">
-                        <a href="product.html">
-                            <img src="assets/images/incontournable-2.webp" alt="Le Carré Bordeaux" width="500"
-                                height="500" loading="lazy">
-                        </a>
-                        <div class="product-actions">
-                            <button class="btn-cart"><i class="ph ph-shopping-bag"></i> Ajouter au panier</button>
-                            <button class="action-btn"><i class="ph ph-heart"></i></button>
-                        </div>
+                    <div>
+                        <h4 style="color: var(--color-white); margin-bottom: 1.5rem;">Aide</h4>
+                        <ul
+                            style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 2; list-style: none; padding: 0;">
+                            <li><a href="#" style="color: inherit;">FAQ</a></li>
+                            <li><a href="#" style="color: inherit;">Livraison & Retours</a></li>
+                            <li><a href="#" style="color: inherit;">Guide des tailles</a></li>
+                            <li><a href="#" style="color: inherit;">Mentions Légales</a></li>
+                        </ul>
                     </div>
-                    <div class="product-info">
-                        <h3><a href="product.html">Le Carré Bordeaux</a></h3>
-                        <div class="card-rating">
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star-half"></i>
-                            <span>(32)</span>
-                        </div>
-                        <p class="product-micro-desc">Synthétique Premium · 12 pouces</p>
-                        <p class="price">89,00 €</p>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-img-box">
-                        <span class="badge-new" style="background-color: var(--color-secondary);">Nouveau</span>
-                        <a href="product.html">
-                            <img src="assets/images/incontournable-3.webp" alt="Afro Kinky" width="500" height="500"
-                                loading="lazy">
-                        </a>
-                        <div class="product-actions">
-                            <button class="btn-cart"><i class="ph ph-shopping-bag"></i> Ajouter au panier</button>
-                            <button class="action-btn"><i class="ph ph-heart"></i></button>
+                    <div>
+                        <h4 style="color: var(--color-white); margin-bottom: 1.5rem;">Cercle Privé</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1rem;">Rejoignez-nous
+                            et
+                            bénéficiez de <strong>-10% sur votre première commande</strong>.</p>
+                        <div style="display: flex;">
+                            <input type="email" placeholder="Votre email"
+                                style="padding: 0.8rem; flex: 1; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white;">
+                            <button
+                                style="background: var(--color-secondary); color: var(--color-primary); border: none; padding: 0 1rem; font-weight: 700; cursor: pointer;">JE
+                                M'INSCRIS</button>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <h3><a href="product.html">Afro Kinky Volume</a></h3>
-                        <div class="card-rating">
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <span>(19)</span>
-                        </div>
-                        <p class="product-micro-desc">Cheveux Naturels · 14 pouces</p>
-                        <p class="price">149,00 €</p>
-                    </div>
-                </div>
 
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-img-box">
-                        <a href="product.html">
-                            <img src="assets/images/incontournable-4.webp" alt="Lisse Platine" width="500" height="500"
-                                loading="lazy">
-                        </a>
-                        <div class="product-actions">
-                            <button class="btn-cart"><i class="ph ph-shopping-bag"></i> Ajouter au panier</button>
-                            <button class="action-btn"><i class="ph ph-heart"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3><a href="product.html">Lisse Platine</a></h3>
-                        <div class="card-rating">
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph ph-star"></i>
-                            <span>(12)</span>
-                        </div>
-                        <p class="product-micro-desc">Synthétique Premium · 24 pouces</p>
-                        <p class="price">99,00 €</p>
-                    </div>
+                </div>
+                <div
+                    style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.8rem;">
+                    <p>&copy; 2025 Merle Éclat. Tous droits réservés.</p>
                 </div>
             </div>
-
-            <div class="text-center" style="margin-top: 3rem;">
-                <a href="shop.html" class="btn btn-primary reveal-text" style="animation-delay: 0.4s;">Voir Toute la
-                    Boutique</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Customer Reviews (Infinite Scroll) -->
-    <section class="section-padding" style="background-color: #f9f9f9; overflow: hidden;">
-        <h2 class="section-title">Elles nous font confiance</h2>
-
-        <div class="reviews-marquee">
-            <div class="reviews-track">
-                <!-- Batch 1 -->
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Une qualité incroyable, les mèches sont douces et soyeuses. Je ne peux plus m'en passer !"
-                    </p>
-                    <span class="author">- Sophie M.</span>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Le packaging est sublime, tout est arrivé en parfait état. Une vraie expérience de luxe."
-                    </p>
-                    <span class="author">- Kamila D.</span>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Livraison super rapide et produit conforme à la description. Je recommande à 100%."</p>
-                    <span class="author">- Julie T.</span>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"J'adore le volume de la perruque Afro Kinky, le rendu est ultra naturel."</p>
-                    <span class="author">- Aïssa B.</span>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Le service client est au top, merci pour les conseils personnalisés."</p>
-                    <span class="author">- Claire L.</span>
-                </div>
-
-                <!-- Batch 2 (Duplicate for infinite loop) -->
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Une qualité incroyable, les mèches sont douces et soyeuses. Je ne peux plus m'en passer !"
-                    </p>
-                    <span class="author">- Sophie M.</span>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Le packaging est sublime, tout est arrivé en parfait état. Une vraie expérience de luxe."
-                    </p>
-                    <span class="author">- Kamila D.</span>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Livraison super rapide et produit conforme à la description. Je recommande à 100%."</p>
-                    <span class="author">- Julie T.</span>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"J'adore le volume de la perruque Afro Kinky, le rendu est ultra naturel."</p>
-                    <span class="author">- Aïssa B.</span>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Le service client est au top, merci pour les conseils personnalisés."</p>
-                    <span class="author">- Claire L.</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </footer>
 
 
 
-
-    <!-- FAQ Section -->
-    <section class="section-padding faq-section">
-        <div class="container">
-            <h2 class="section-title text-center">Questions Fréquentes</h2>
-            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item">
-                    <button class="faq-toggle">
-                        <span>Quels sont les délais de livraison ?</span>
-                        <i class="ph ph-plus"></i>
-                    </button>
-                    <div class="faq-content">
-                        <p>Nous expédions généralement vos commandes sous 24 à 48h ouvrées. Une fois expédiée, la
-                            livraison prend 2 à 4 jours ouvrables en France métropolitaine.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-toggle">
-                        <span>Puis-je échanger ou retourner mon produit ?</span>
-                        <i class="ph ph-plus"></i>
-                    </button>
-                    <div class="faq-content">
-                        <p>Oui, vous disposez de 14 jours après réception pour nous retourner votre produit s'il est
-                            dans son état d'origine (non porté, étiquette intacte). Contactez notre service client
-                            pour
-                            la procédure.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-toggle">
-                        <span>Quelle est la différence entre cheveux naturels et synthétiques ?</span>
-                        <i class="ph ph-plus"></i>
-                    </button>
-                    <div class="faq-content">
-                        <p>Nos cheveux naturels (Human Hair) peuvent être colorés et chauffés comme vos propres
-                            cheveux.
-                            Nos fibres synthétiques premium offrent un style impeccable et durable sans entretien
-                            complexe, mais ne supportent pas les colorations.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-toggle">
-                        <span>Comment entretenir ma perruque ?</span>
-                        <i class="ph ph-plus"></i>
-                    </button>
-                    <div class="faq-content">
-                        <p>Nous recommandons un lavage doux tous les 10 à 15 ports avec nos soins adaptés. Laissez
-                            sécher à l'air libre pour préserver la fibre et la brillance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final Conversion CTA -->
-    <section class="cta-final-section">
-        <div class="container">
-            <div class="cta-final-content">
-                <h2>Prête à révéler votre éclat ?</h2>
-                <p>
-                    Rejoignez des milliers de femmes qui ont choisi l'excellence Merle Éclat.<br>
-                    <strong>Livraison gratuite</strong> dès 150 € d'achat.
-                </p>
-                <a href="shop.html" class="btn-secondary">DÉCOUVRIR LA COLLECTION</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer style="background-color: var(--color-primary); color: white; padding: 4rem 0 2rem 0;">
-        <div class="container">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-                <div>
-                    <h3 style="color: var(--color-secondary); font-size: 1.5rem; margin-bottom: 1.5rem;">MERLE ÉCLAT
-                    </h3>
-                    <p style="color: #aaa; font-size: 0.9rem;">L'élégance à portée de clic. Sublimez votre beauté
-                        avec
-                        nos perruques d'exception.</p>
-                    <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"
-                            style="color: white; font-size: 1.5rem; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-secondary)'"
-                            onmouseout="this.style.color='white'"><i class="ph ph-facebook-logo"></i></a>
-                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"
-                            style="color: white; font-size: 1.5rem; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-secondary)'"
-                            onmouseout="this.style.color='white'"><i class="ph ph-instagram-logo"></i></a>
-                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok"
-                            style="color: white; font-size: 1.5rem; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-secondary)'"
-                            onmouseout="this.style.color='white'"><i class="ph ph-tiktok-logo"></i></a>
-                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"
-                            style="color: white; font-size: 1.5rem; transition: color 0.3s;"
-                            onmouseover="this.style.color='var(--color-secondary)'"
-                            onmouseout="this.style.color='white'"><i class="ph ph-youtube-logo"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Navigation</h4>
-                    <ul style="color: #aaa; font-size: 0.9rem; line-height: 2;">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="shop.html">Boutique</a></li>
-                        <li><a href="#about">À Propos</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Aide</h4>
-                    <ul style="color: #aaa; font-size: 0.9rem; line-height: 2;">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Livraison & Retours</a></li>
-                        <li><a href="#">Guide des tailles</a></li>
-                        <li><a href="#">Mentions Légales</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Cercle Privé</h4>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 1rem;">Rejoignez-nous et bénéficiez de
-                        <strong>-10% sur votre première commande</strong>.
-                    </p>
-                    <div style="display: flex;">
-                        <input type="email" placeholder="Votre email" style="padding: 0.8rem; flex: 1; border: none;">
-                        <button
-                            style="background: var(--color-secondary); color: var(--color-primary); border: none; padding: 0 1rem; font-weight: 700; cursor: pointer;">JE
-                            M'INSCRIS</button>
-                    </div>
-                </div>
-
-            </div>
-            <div
-                style="border-top: 1px solid #333; padding-top: 2rem; text-align: center; color: #666; font-size: 0.8rem;">
-                <p>&copy; 2025 Merle Éclat. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
-
-
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
-    <script>
-        // Simple Interaction Script embedded for now
-
-        // Sticky Header
-        // Sticky Header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 1)';
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            } else {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        });
-    </script>
+        <!-- Scripts -->
+        <script src="assets/js/main.js"></script>
 </body>
 
 </html>
